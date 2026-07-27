@@ -8,7 +8,7 @@ function HomePage() {
     <div className="page">
       <section className="hero-section">
         <p className="eyebrow">Portfolio</p>
-        <h1>Hej, jeg hedder Dit Navn.</h1>
+        <h1>Hej, jeg hedder Laura.</h1>
         <p className="hero-text">
           Jeg arbejder med frontend, design og digitale produkter. Her samler
           jeg projekter, proces og det, jeg lærer undervejs.

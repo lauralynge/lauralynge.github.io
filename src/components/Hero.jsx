@@ -1,14 +1,23 @@
-import GridLines from "./GridLines";
+import { useEffect } from "react";
+import HeroGridLines from "./HeroGridLines";
 import "./Hero.css";
 import Navbar from "./Navbar";
+import { initHeroAnimations } from "../utils/HeroAnimations";
+
+
 
 export default function Hero() {
+
+  useEffect(() => {
+  initHeroAnimations();
+}, []);
+
   return (
     <section className="hero">
       <Navbar />
 
       <div className="hero-grid">
-        <GridLines cols={8} rows={4} />
+        <HeroGridLines cols={8} rows={4} />
 
         <div
           className="cell-box box-orange"
@@ -31,23 +40,23 @@ export default function Hero() {
           style={{ gridColumn: 8, gridRow: 4, animationDelay: "1.5s" }}
         />
 
-        <h1 className="hero-title" style={{ gridColumn: "3 / 7", gridRow: 1 }}>
+        <h1 className="hero-title slide-right digital " style={{ gridColumn: "3 / 6", gridRow: 1 }}>
           Digital
         </h1>
-        
-        <h1 className="hero-title" style={{ gridColumn: "4 / 9", gridRow: 2 }}>
+
+        <h1 className="hero-title slide-left designer has-slash" style={{ gridColumn: "4 / 7", gridRow: 2 }}>
           Designer
         </h1>
-        <h1 className="hero-title" style={{ gridColumn: "2 / 6", gridRow: 3 }}>
+        <h1 className="hero-title slide-right developer" style={{ gridColumn: "2 / 5", gridRow: 3 }}>
           Developer
         </h1>
 
         <p className="hero-intro" style={{ gridColumn: "6 / 8", gridRow: 3 }}>
-          Jeg er en digital og grafisk designer, med en passion for at skabe
+          Jeg er en digital og grafisk designer med en passion for at skabe
           design, der ikke bare ser flot ud, men også giver mening og værdi.
           <br />
           <br />
-          Laura Lynge Nielsen
+          – Laura Lynge Nielsen
         </p>
       </div>
     </section>

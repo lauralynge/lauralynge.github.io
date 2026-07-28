@@ -26,14 +26,76 @@
 .nav-item {
   align-self: center;
   justify-self: center;
-  color: var(--blue);
   text-decoration: none;
 }
 
 /* ----- Tekst om mig ----- */
 
 .hero-intro {
-  align-self: center;
-  color: var(--blue);
+  justify-self: center;   /* horisontal centering */
+  align-self: center;     /* vertikal centering */
+  text-align: left;       /* eller center, hvis du vil */
+   padding: 2rem 3rem;
 }
 
+.hero-title {
+  justify-self: center;  /* horisontal centering */
+  align-self: center;    /* vertikal centering */
+  text-align: center;
+  position: relative;
+  z-index: 4;
+   opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Text animation*/
+/* Startposition før scroll */
+.slide-right,
+.slide-left {
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Retning */
+.slide-right {
+  transform: translateX(-40px); /* starter lidt til venstre */
+}
+
+.slide-left {
+  transform: translateX(40px); /* starter lidt til højre */
+}
+
+/* Når de bliver synlige */
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* text slide */
+.slide-right-out {
+  transform: translateX(1000px);
+  opacity: 0;
+}
+
+.slide-left-out {
+  transform: translateX(-1000px);
+  opacity: 0;
+}
+
+
+.has-slash {
+  position: relative;
+}
+
+.has-slash::after {
+  content: "";
+  position: absolute;
+  left: -10%;      /* hvor langt ud til højre */
+  top: 160%;          /* vertikal placering */
+  width: 8rem;       /* længden på stregen */
+  height: 2px;       /* tykkelsen */
+  background: var(--blue);
+  transform: translateY(-50%) rotate(-230deg); /* skrå vinkel */
+}

@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: var(--grid-cols);
   height: var(--row-h);
-  border-bottom: 1px solid var(--grid-line); /* afgrænsningen fra Figma */
   z-index: 10;
 }
 
@@ -14,7 +13,6 @@
 
 .brand {
   grid-column: 2;
-  color: var(--blue);
   align-self: center;
   justify-self: center;
   text-decoration: none;
@@ -25,7 +23,6 @@
   align-items: center;
   justify-content: center;
   height: 100%; /* udfylder cellens højde */
-  color: var(--blue);
   text-decoration: none;
 }
 

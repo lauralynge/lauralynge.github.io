@@ -3,10 +3,21 @@
   inset: 0;
   display: grid;
   grid-template-columns: var(--grid-cols); /* kolonnerne er stadig fælles og korrekte */
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 .grid-line-cell {
   border-right: 1px solid var(--grid-line);
   border-bottom: 1px solid var(--grid-line);
+}
+
+.no-lines {
+  border-right: none !important;
+}
+
+.navbar-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 10; /* over navbar baggrund */
+  pointer-events: none;
 }

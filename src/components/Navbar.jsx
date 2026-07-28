@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router";
-import GridLines from "./GridLines";
+import NavbarGridLines from "./NavbarGridLines";
 import "./Navbar.css";
 
 export default function Navbar({ className = "" }) {
@@ -8,7 +8,7 @@ export default function Navbar({ className = "" }) {
 
   return (
     <header className={`site-header ${className}`}>
-      <GridLines cols={8} rows={1} />
+      <NavbarGridLines cols={8} rows={1} />
       {isHome && (
         <div
           className="cell-box box-blue"

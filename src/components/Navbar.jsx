@@ -2,12 +2,12 @@ import { NavLink, useLocation } from "react-router";
 import GridLines from "./GridLines";
 import "./Navbar.css";
 
-export default function Navbar() {
-    const { pathname } = useLocation();
-    const isHome = pathname === "/";
+export default function Navbar({ className = "" }) {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${className}`}>
       <GridLines cols={8} rows={1} />
       {isHome && (
         <div

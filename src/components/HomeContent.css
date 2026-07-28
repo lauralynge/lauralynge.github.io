@@ -1,0 +1,8 @@
+.content {
+  margin-top: 100vh ;
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  padding : 8rem 8rem;
+  box-shadow: var(--shadow-top);
+}

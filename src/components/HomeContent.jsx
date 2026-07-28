@@ -1,13 +1,14 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
+import "./HomeContent.css";
 
 export default function HomeContent() {
   const featuredProjects = projects.slice(0, 2);
 
   return (
     <>
-      <div className="page">
-        <section className="section">
+      <div className="content">
+        <section className="section-projects">
           <div className="section-heading">
             <h1>Projekter</h1>
           </div>

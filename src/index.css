@@ -56,6 +56,15 @@
   --grid-rows: repeat(4, 2fr); /* 4 "rækker", top/bund er halve */
   --grid-line: var(--blue);
   --row-h: 10vh;
+
+  /* Shadows */
+  --shadow-bottom: 0 2px 10px rgba(41, 35, 42, 0.2);
+  --shadow-top: 0 -2px 10px rgba(41, 35, 42, 0.2);
+
+  /* Border */
+  --border: 1px solid rgba(0, 0, 0, 0.08);
+  --border-radius-small: 0.5rem;
+  --border-radius-large: 1rem;
 }
 
 /* ----- Blinkende bokse ----- */
@@ -238,11 +247,7 @@ p {
 
 */
 
-.page {
-  width: min(100% - 2rem, 1120px);
-  margin: 0 auto;
-  padding: 3rem 0 5rem;
-}
+
 
 .narrow {
   width: min(100% - 2rem, 760px);

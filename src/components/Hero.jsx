@@ -1,9 +1,12 @@
 import GridLines from "./GridLines";
 import "./Hero.css";
+import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
     <section className="hero">
+      <Navbar />
+
       <div className="hero-grid">
         <GridLines cols={8} rows={4} />
 
@@ -31,6 +34,7 @@ export default function Hero() {
         <h1 className="hero-title" style={{ gridColumn: "3 / 7", gridRow: 1 }}>
           Digital
         </h1>
+        
         <h1 className="hero-title" style={{ gridColumn: "4 / 9", gridRow: 2 }}>
           Designer
         </h1>
@@ -38,10 +42,7 @@ export default function Hero() {
           Developer
         </h1>
 
-        <p
-          className="hero-intro"
-          style={{ gridColumn: "6 / 8", gridRow: 3 }}
-        >
+        <p className="hero-intro" style={{ gridColumn: "6 / 8", gridRow: 3 }}>
           Jeg er en digital og grafisk designer, med en passion for at skabe
           design, der ikke bare ser flot ud, men også giver mening og værdi.
           <br />

@@ -1,10 +1,11 @@
 .site-header {
-  position: relative; /* NY: giver .grid-lines noget at forholde sig til */
+  position: relative;
   overflow: hidden; /* NY: sikkerhedsnet, hvis noget alligevel skulle stikke ud */
   display: grid;
   grid-template-columns: var(--grid-cols);
   height: var(--row-h);
   border-bottom: 1px solid var(--grid-line); /* afgrænsningen fra Figma */
+  z-index: 10;
 }
 
 .site-nav {
@@ -31,4 +32,32 @@
 /* Den aktive fane - matcher highlighten i Figma */
 .nav-link.active {
   background: var(--green);
+}
+
+/* Sticky navbar der dukker op når man scroller ned */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 50;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Skjult når man er i heroen */
+.navbar-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Navbar */
+.navbar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 20;
 }

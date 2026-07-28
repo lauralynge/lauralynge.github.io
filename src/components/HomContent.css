@@ -1,8 +1,0 @@
-.page {
-  position: relative;
-  z-index: 1; /* ligger foran Hero */
-  background: var(
-    --white
-  ); /* skal have en solid baggrund, ellers ses Hero igennem */
-  margin-top: 100dvh; /* skubber sidens indhold ned, så Hero er synlig først */
-}

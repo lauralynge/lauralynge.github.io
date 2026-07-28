@@ -1,0 +1,28 @@
+/* ----------------------------- */
+/* HERO GRID + ANIMATION         */
+/* ----------------------------- */
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+  grid-template-rows: var(--grid-rows);
+  height: 100dvh;
+}
+.hero-grid > *:not(.grid-lines) {
+  position: relative;
+  z-index: 1;
+}
+.nav-item {
+  align-self: center;
+  justify-self: center;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* ----- Tekst om mig ----- */
+
+.hero-intro {
+  align-self: center;
+  color: var(--blue);
+}

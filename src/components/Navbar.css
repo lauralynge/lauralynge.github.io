@@ -1,0 +1,34 @@
+.site-header {
+  position: relative; /* NY: giver .grid-lines noget at forholde sig til */
+  overflow: hidden; /* NY: sikkerhedsnet, hvis noget alligevel skulle stikke ud */
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+  height: var(--row-h);
+  border-bottom: 1px solid var(--grid-line); /* afgrænsningen fra Figma */
+}
+
+.site-nav {
+  display: contents;
+}
+
+.brand {
+  grid-column: 2;
+  color: var(--blue);
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* udfylder cellens højde */
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Den aktive fane - matcher highlighten i Figma */
+.nav-link.active {
+  background: var(--green);
+}

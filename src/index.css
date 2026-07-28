@@ -1,14 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* ----------------------------- */
+/* GLOBAL BASELINE               */
+/* ----------------------------- */
+
 :root {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  /* Typography scale */
+  --font-hero: 128px;
+  --font-h1: 96px;
+  --font-h2: 48px;
+  --font-h3: 20px;
+  --font-body: 16px;
+  --font-small: 12px;
+
+  --line-tight: 1;
+  --line-normal: 1.2;
+  --line-relaxed: 1.4;
+
+  /* Colors */
+  --white: #fef9ee;
+  --blue: #374dae;
+  --orange: #f29b3f;
+  --burgundy: #762117;
+  --green: #e6e19c;
+  --light-blue: #99afee;
+  --grey: #c3c3c3;
+
+  /* Semantic aliases */
+  --brand-primary: var(--blue);
+  --brand-secondary: var(--green);
+  --brand-accent: var(--light-blue);
+  --brand-dark: var(--burgundy);
+  --brand-light: var(--white);
+
+  /* Global font + rendering */
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
   color: #1d2430;
-  background: #f7f4ef;
+  background: var(--white);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Grid */
+  --grid-cols: 0.5fr repeat(6, 1fr) 0.5fr; /* 8 "kolonner", yderst er halve */
+  --grid-rows: repeat(4, 2fr); /* 4 "rækker", top/bund er halve */
+  --grid-line: var(--blue);
+  --row-h: 10vh;
 }
 
+/* ----- Blinkende bokse ----- */
+.cell-box {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: blink 1s ease-in-out infinite;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.box-orange {
+  background: #f29b3f;
+}
+.box-burgundy {
+  background: #762117;
+}
+.box-green {
+  background: #e6e19c;
+}
+.box-blue {
+  background: #99afee;
+}
+.box-grey {
+  background: #c3c3c3;
+}
+.box-pink {
+  background: #d98fd0;
+}
+
+/* Reset / baseline */
 * {
   box-sizing: border-box;
 }
@@ -33,6 +122,84 @@ textarea {
   font: inherit;
 }
 
+/* ----------------------------- */
+/* TYPOGRAFI                     */
+/* ----------------------------- */
+
+/* HERO – bruges kun på forsiden */
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-hero);
+  line-height: var(--line-tight);
+  font-weight: 400;
+  min-width: 0; /* NY: lader kolonnen skrumpe under tekstens naturlige bredde */
+  min-height: 0; /* NY: lader rækken skrumpe under tekstens naturlige højde */
+}
+
+/* H1 – sektionstitler */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-h1);
+  line-height: var(--line-tight);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  color: var(--blue);
+}
+
+/* H2 – projekttitler */
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-h2);
+  line-height: var(--line-normal);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+}
+
+/* H3 – knapper / mindre overskrifter */
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-h3);
+  line-height: var(--line-normal);
+  font-weight: 400;
+  margin: 0 0 0.5em;
+}
+
+/* Body tekst */
+p {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-body);
+  line-height: var(--line-relaxed);
+  font-weight: 400;
+  margin: 0 0 1em;
+}
+
+/* Undertekst */
+.small {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-small);
+  line-height: var(--line-normal);
+  font-weight: 600;
+}
+
+/* Microtekst */
+.micro {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-small);
+  line-height: var(--line-tight);
+}
+
+.Hero .Navbar {
+  min-height: 100vh;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE DESIGN            */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* RACE    */
+/* ----------------------------- */
+/*
 .site-header {
   display: flex;
   align-items: center;
@@ -68,6 +235,8 @@ textarea {
   color: #111827;
   background: #ffffff;
 }
+
+*/
 
 .page {
   width: min(100% - 2rem, 1120px);
@@ -109,42 +278,6 @@ textarea {
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
-h1 {
-  max-width: 760px;
-  margin-bottom: 1rem;
-  color: #111827;
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
-  line-height: 0.95;
-  letter-spacing: 0;
-}
-
-h2 {
-  margin-bottom: 0.75rem;
-  color: #111827;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  line-height: 1.05;
-  letter-spacing: 0;
-}
-
-h3 {
-  margin-bottom: 0.6rem;
-  color: #111827;
-  font-size: 1.35rem;
-  letter-spacing: 0;
-}
-
-p {
-  color: #526173;
-  line-height: 1.65;
 }
 
 .hero-text,

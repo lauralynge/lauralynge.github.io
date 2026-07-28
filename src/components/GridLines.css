@@ -1,0 +1,12 @@
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: var(--grid-cols); /* kolonnerne er stadig fælles og korrekte */
+  z-index: 2;
+  pointer-events: none;
+}
+.grid-line-cell {
+  border-right: 1px solid var(--grid-line);
+  border-bottom: 1px solid var(--grid-line);
+}

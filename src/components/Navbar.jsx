@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { NavLink, useLocation } from "react-router-dom";
 import NavbarGridLines from "./NavbarGridLines";
 import "./Navbar.css";
 

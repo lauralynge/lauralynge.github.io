@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import HeroGridLines from "./HeroGridLines";
 import "./Hero.css";
 import Navbar from "./Navbar";
@@ -8,9 +9,24 @@ import { initHeroAnimations } from "../utils/HeroAnimations";
 
 export default function Hero() {
 
+ const location = useLocation();
+
   useEffect(() => {
-  initHeroAnimations();
-}, []);
+    // Kun kør animationen når vi er på forsiden
+    if (location.pathname === "/") {
+      const digital = document.querySelector(".digital");
+      const designer = document.querySelector(".designer");
+      const developer = document.querySelector(".developer");
+
+      // Nulstil klasser
+      digital.classList.remove("slide-in", "slide-right-out");
+      designer.classList.remove("slide-in", "slide-left-out");
+      developer.classList.remove("slide-in", "slide-right-out");
+
+      // Genstart animationen
+      initHeroAnimations();
+    }
+  }, [location.pathname]);
 
   return (
     <section className="hero">

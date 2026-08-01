@@ -4,7 +4,7 @@
   grid-template-columns: minmax(20rem, 50rem) 1fr;
   gap: 2.5rem;
   padding-bottom: 2rem;
-  align-items: stretch; /* vigtigt! */
+  align-items: stretch;
 }
 
 .feat-project-card::after {
@@ -12,7 +12,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%; /* fuld bredde */
+  width: 100%;
   height: 1px;
   background: var(--blue);
 }
@@ -23,37 +23,44 @@
   display: block;
 }
 
-/* Denne klasse skal have den faste størrelse — ikke img'en */
+/* Billed-wrapperen */
 .feat-project-image {
   width: 100%;
-
   border-radius: var(--border-radius-small);
+  overflow: hidden; /* vigtig for zoom */
 }
 
-/* img'en fylder nu bare det rum wrapperen giver den */
+/* Selve billedet */
 .feat-project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+
+/* Hover på hele kortet → zoom billedet */
+.feat-project-card:hover .feat-project-image img {
+  transform: scale(1.05);
+}
+
 .feat-project-card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* top + bottom + knap fordeles */
-  height: 100%; /* fylder hele højden */
+  justify-content: space-between;
+  height: 100%;
 }
 
 .content-bottom {
   display: flex;
-  align-items: flex-end; /* bunden af begge items */
+  align-items: flex-end;
 }
 
 .tags {
-  list-style: none; /* fjerner prikker */
-  padding: 0; /* fjerner default padding */
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: column; /* stabler dem ovenpå hinanden */
+  flex-direction: column;
   gap: 0.5rem;
   margin: 0;
 }

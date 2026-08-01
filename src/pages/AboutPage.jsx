@@ -1,6 +1,6 @@
 function AboutPage() {
   return (
-    <div className="page narrow">
+    <div className="page">
       <p className="eyebrow">Om mig</p>
       <h1>Hvem er jeg?</h1>
       <p className="lead">

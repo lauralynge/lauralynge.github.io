@@ -200,6 +200,13 @@ p {
   min-height: 100vh;
 }
 
+/* Generel page styling */
+
+.page {
+  padding: 8rem 8rem;
+    
+  }
+
 /* ----------------------------- */
 /* RESPONSIVE DESIGN            */
 /* ----------------------------- */

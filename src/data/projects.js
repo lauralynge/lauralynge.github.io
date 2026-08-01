@@ -1,5 +1,23 @@
 const projects = [
-{
+  {
+    slug: "rumly",
+    title: "Rumly",
+    subtitle: "En digital løsning til roomie søgning.",
+    year: "2025",
+    summary: "En digital løsning til rumstyring og booking.",
+    description:
+      "Rumly er en webapp designet til at gøre det nemt at booke og administrere rum. Projektet fokuserer på UX‑flow, UI‑design og prototyping, med en ren visuel stil og brugervenlig navigation.",
+    tags: ["UX", "UI", "Webapp"],
+    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+    links: [
+      {
+        label: "Eksempel-link",
+        href: "https://github.com",
+      },
+    ],
+  },
+
+  {
     slug: "akvarie",
     title: "Akvarie",
     subtitle: "En interaktiv oplevelse",
@@ -20,26 +38,9 @@ const projects = [
       },
     ],
   },
-  {
-    slug: "rumly",
-    title: "Rumly",
-    subtitle: "En digital løsning til roomie søgning.",
-    year: "2025",
-    summary: "En digital løsning til rumstyring og booking.",
-    description:
-      "Rumly er en webapp designet til at gøre det nemt at booke og administrere rum. Projektet fokuserer på UX‑flow, UI‑design og prototyping, med en ren visuel stil og brugervenlig navigation.",
-    tags: ["UX", "UI", "Webapp"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
-    links: [
-      {
-        label: "Eksempel-link",
-        href: "https://github.com",
-      },
-    ],
-  },
 
   {
-   slug: "little-looms",
+    slug: "little-looms",
     title: "Little Looms",
     subtitle: "En webshop med fokus på branding og UI‑design.",
     year: "2025",
@@ -55,5 +56,35 @@ const projects = [
       },
     ],
   },
-  ];
+  {
+    slug: "test-1",
+    title: "Stock grafik",
+    subtitle: "En samling af stock grafik",
+    summary: "En samling af stock grafik.",
+    description: "Her leger jeg lidt med grafik",
+    tags: ["Grafik", "Design"],
+    image: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    links: [
+      {
+        label: "Eksempel-link",
+        href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "test-2",
+    title: "Plakater",
+    subtitle: "En samling af plakater",
+    summary: "En samling af plakater.",
+    description: "Her leger jeg lidt med grafik",
+    tags: ["Grafik", "Design"],
+    image: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    links: [
+      {
+        label: "Eksempel-link",
+        href: "https://github.com",
+      },
+    ],
+  },
+];
 export default projects;

@@ -7,7 +7,7 @@ function ProjectPage() {
 
   if (!project) {
     return (
-      <div className="page narrow">
+      <div className="page">
         <p className="eyebrow">404</p>
         <h1>Projektet blev ikke fundet</h1>
         <p>Det projekt findes ikke i listen endnu.</p>
@@ -19,7 +19,7 @@ function ProjectPage() {
   }
 
   return (
-    <article className="page narrow">
+    <article className="page">
       <Link className="back-link" to="/projects">
         Tilbage til projekter
       </Link>

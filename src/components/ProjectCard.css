@@ -1,0 +1,42 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 45rem;
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+}
+
+/* billedet */
+.project-card-image {
+  overflow: hidden;
+  border-radius: 12px;
+  height: 35rem;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Hover på hele kortet */
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+/* content skal fylde al pladsen mellem billede og tags */
+.project-card-content {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* ← vigtig! */
+}
+
+/* tags skal ligge i bunden */
+.project-tags {
+  margin-top: auto; /* ← skubber tags ned i bunden */
+}

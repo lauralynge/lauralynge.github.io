@@ -11,7 +11,7 @@
   --font-h2: 48px;
   --font-h3: 20px;
   --font-body: 16px;
-  --font-small: 12px;
+  --font-small: 16px;
 
   --line-tight: 1;
   --line-normal: 1.2;
@@ -158,7 +158,7 @@ h1 {
 h2 {
   font-family: "Playfair Display", serif;
   font-size: var(--font-h2);
-  line-height: var(--line-normal);
+  line-height: var(--line-tight);
   font-weight: 600;
   margin: 0 0 0.5em;
 }
@@ -245,4 +245,3 @@ p {
 }
 
 */
-

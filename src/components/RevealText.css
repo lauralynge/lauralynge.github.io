@@ -1,0 +1,23 @@
+.reveal-text {
+  display: inline-block;
+}
+
+.reveal-letter {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.reveal-letter-inner {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.5s ease;
+}
+
+.reveal-letter-inner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -1,0 +1,73 @@
+.feat-project-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(20rem, 50rem) 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2rem;
+  align-items: stretch; /* vigtigt! */
+}
+
+.feat-project-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* fuld bredde */
+  height: 1px;
+  background: var(--blue);
+}
+
+.feat-project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Denne klasse skal have den faste størrelse — ikke img'en */
+.feat-project-image {
+  width: 100%;
+
+  border-radius: var(--border-radius-small);
+}
+
+/* img'en fylder nu bare det rum wrapperen giver den */
+.feat-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.feat-project-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* top + bottom + knap fordeles */
+  height: 100%; /* fylder hele højden */
+}
+
+.content-bottom {
+  display: flex;
+  align-items: flex-end; /* bunden af begge items */
+}
+
+.tags {
+  list-style: none; /* fjerner prikker */
+  padding: 0; /* fjerner default padding */
+  display: flex;
+  flex-direction: column; /* stabler dem ovenpå hinanden */
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.tags li {
+  border-radius: 6px;
+}
+
+.explore-button {
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-large);
+  display: inline-block;
+  text-decoration: none;
+  margin-left: auto;
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
-import HomeContent from "../components/HomeContent";
+import FeatProjectsSection from "../components/FeatProjectsSection";
 import Navbar from "../components/Navbar";
 
 function HomePage() {
@@ -23,7 +23,7 @@ function HomePage() {
     <>
       <Hero />
       <Navbar className={showStickyNav ? "navbar-fixed" : "navbar-hidden"} />
-      <HomeContent />
+      <FeatProjectsSection />
     </>
   );
 }

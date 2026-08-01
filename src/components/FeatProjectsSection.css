@@ -1,0 +1,81 @@
+.feat-project-section {
+  padding: 4rem 0;
+  margin-top: 100vh;
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  padding: 8rem 8rem;
+  box-shadow: var(--shadow-top);
+}
+
+.feat-project-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+
+/* Sektionstitel */
+.section-title {
+  position: relative;
+  padding-bottom: 2rem; /* giver plads til linjen */
+}
+
+/* --- Understregning af sektionstitel --- */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* fuld bredde */
+  height: 1px;
+  background: var(--blue);
+  margin-bottom: 2rem;
+}
+
+
+/***** ALLE PROJEKTER-KNAPPEN *****/
+
+/* Streger over og under "Alle projekter"-knappen */
+.all-projects-button {
+  border-bottom: 1px solid var(--blue);
+}
+
+.feat-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  text-decoration: none;
+}
+
+/* Selve teksten "Alle projekter" */
+.feat-button-text {
+  margin: 0;
+  color: var(--blue);
+  white-space: nowrap;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Pilen (arrow-long.svg fra public/) */
+.feat-button-arrow {
+  display: inline-block;
+  height: 4rem; /* juster efter din SVG's proportioner */
+  width: auto;
+  opacity: 0;
+  transition:
+    opacity 0.6s ease,
+    transform 0.3s ease;
+}
+
+/* Fade pilen ind, når knappen scrolles i viewport (styret af useInView) */
+.feat-button.is-visible .feat-button-arrow {
+  opacity: 1;
+}
+
+/* --- Hover-tilstand: tekst nudger til venstre, streg trækker sig sammen, pil glider til højre --- */
+.feat-button:hover .feat-button-arrow {
+  transform: translateX(10px);
+}

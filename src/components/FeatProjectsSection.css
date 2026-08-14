@@ -5,14 +5,12 @@
   z-index: 1;
   background: var(--white);
   padding: 8rem 8rem;
-  box-shadow: var(--shadow-top);
 }
 
 .feat-project-grid {
   display: grid;
   gap: 2rem;
 }
-
 
 /* Sektionstitel */
 .section-title {
@@ -31,7 +29,6 @@
   background: var(--blue);
   margin-bottom: 2rem;
 }
-
 
 /***** ALLE PROJEKTER-KNAPPEN *****/
 

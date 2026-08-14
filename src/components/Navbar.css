@@ -42,16 +42,16 @@
 }
 
 /* Sticky navbar der dukker op når man scroller ned */
-.navbar-fixed {
+/*.navbar-fixed {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
+  background: var(--white);
   z-index: 50;
   opacity: 1;
   transition: opacity 0.3s ease;
-}
+}*/
 
 /* Skjult når man er i heroen */
 .navbar-hidden {

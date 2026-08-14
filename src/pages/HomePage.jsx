@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import FeatProjectsSection from "../components/FeatProjectsSection";
 import Navbar from "../components/Navbar";
+import PillsSection from "../components/PillSection";
 
 function HomePage() {
   const [showStickyNav, setShowStickyNav] = useState(false);
@@ -24,6 +25,7 @@ function HomePage() {
       <Hero />
       <Navbar className={showStickyNav ? "navbar-fixed" : "navbar-hidden"} />
       <FeatProjectsSection />
+      <PillsSection />
     </>
   );
 }

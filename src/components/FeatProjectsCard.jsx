@@ -8,7 +8,7 @@ export default function FeatProjectCard({ project, index }) {
     <Link to={`/projects/${project.slug}`} className="feat-project-card-link">
       <article className="feat-project-card">
         <WipeReveal className="feat-project-image">
-          <img src={project.image} alt={project.title} />
+          <img src={project.mainImage} alt={project.title} />
         </WipeReveal>
 
         <FadeIn delay={index * 100}>

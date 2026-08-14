@@ -15,8 +15,8 @@ export default function Navbar({ className = "" }) {
           style={{ gridColumn: 8, gridRow: 1, animationDelay: "0s" }}
         />
       )}
-      <NavLink className="brand" to="/" style={{ gridColumn: 2 }}>
-        <h3>Forside/Logo</h3>
+      <NavLink className="nav-logo" to="/" style={{ gridColumn: 2 }}>
+        <img src="/logo.svg" alt="Logo" />
       </NavLink>
 
       <nav className="site-nav" aria-label="Primær navigation">

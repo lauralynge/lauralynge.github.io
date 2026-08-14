@@ -1,0 +1,150 @@
+/* --- INTRO SECTION --- */
+
+/* --- 2 kolonner --- */
+.section.intro {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: auto;
+  align-items: stretch;
+  padding-bottom: 2rem;
+  position: relative; /* ← så ::after virker korrekt */
+}
+
+.col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.section.intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* fuld bredde */
+  height: 1px;
+  background: var(--blue);
+}
+
+.section.intro .eyebrow {
+  opacity: 0.7;
+}
+
+.section.intro .lead {
+  max-width: 70ch;
+}
+
+/* --- BACK LINK --- */
+.back-link {
+  display: inline-block;
+  color: var(--blue);
+  text-decoration: none;
+  position: relative;
+}
+
+.back-link::before {
+  content: "←";
+  margin-right: 0.5rem;
+}
+
+/* --- TAG LIST --- */
+.tag-list {
+  list-style: none;
+  align-content: baseline;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tag-list li {
+  background: var(--white);
+  border-radius: var(--border-radius-small);
+}
+
+/* section mockups */
+.section-mockups {
+  margin: 2rem 0;
+}
+
+.image-row {
+  gap: 2rem;
+}
+
+/* --- PROJECT DETAILS (Team + Links) --- */
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.team-list {
+  grid-column: 1;
+}
+.team-list .small {
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* --- ACTION LINKS --- */
+.actions {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left; /* i tilfælde af at den arver right fra col-right */
+}
+.link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--blue);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link-item:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.link-item .arrow {
+  font-size: 0.9em;
+}
+
+/* --- NEXT PROJECT --- */
+.next-project {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--blue);
+  text-align: right;
+}
+
+.next-project-link {
+  text-decoration: none; /* fjern den almindelige underline, vi bygger vores egen */
+  position: relative;
+  display: inline-block;
+  line-height: 1; /* fjerner fontens indbyggede luft under teksten */
+  padding-bottom: 2px; /* finjuster denne værdi efter smag */
+}
+
+.next-project-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.next-project-link:hover::after {
+  transform: scaleX(1);
+}

@@ -1,9 +1,17 @@
 import { Link, useParams } from "react-router-dom";
 import projects from "../data/projects";
+import ImageRow from "../components/ImageRow";
+import FadeIn from "../components/FadeIn";
+import "./ProjectPage.css";
 
 function ProjectPage() {
   const { slug } = useParams();
-  const project = projects.find((item) => item.slug === slug);
+  const currentIndex = projects.findIndex((item) => item.slug === slug);
+  const project = projects[currentIndex];
+
+  // Find næste projekt i listen, spring tilbage til start hvis det er det sidste
+  const nextProject =
+    currentIndex !== -1 ? projects[(currentIndex + 1) % projects.length] : null;
 
   if (!project) {
     return (
@@ -20,34 +28,69 @@ function ProjectPage() {
 
   return (
     <article className="page">
-      <Link className="back-link" to="/projects">
-        Tilbage til projekter
-      </Link>
+      <section className="section intro">
+        <div className="col-left">
+          <p className="eyebrow">{project.eyebrow}</p>
+          <h1>{project.title}</h1>
+          <p className="lead">{project.description}</p>
+        </div>
 
-      <img className="detail-image" src={project.image} alt="" />
-      <p className="eyebrow">{project.year}</p>
-      <h1>{project.title}</h1>
-      <p className="lead">{project.description}</p>
+        <div className="col-right">
+          <Link className="back-link small" to="/projects">
+            Tilbage til projekter
+          </Link>
+          <ul className="tag-list">
+            {project.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-      <ul className="tag-list">
-        {project.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
+      <section className="section-mockups">
+        {/* Indhold - billeder */}
+        {project.rows.map((row, i) => (
+          <FadeIn delay={i * 300} key={i}>
+            <ImageRow images={row} />
+          </FadeIn>
         ))}
-      </ul>
+      </section>
 
-      <div className="actions">
-        {project.links.map((link) => (
-          <a
-            className="button secondary"
-            href={link.href}
-            key={link.href}
-            rel="noreferrer"
-            target="_blank"
+      <section className="project-details">
+        <div className="team-list">
+          <p className="small">Team</p>
+          <ul className="tag-list">
+            {project.team.map((member) => (
+              <li key={member}>{member}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="actions">
+          {project.links.map((link) => (
+            <a
+              className="button secondary"
+              href={link.href}
+              key={link.href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {nextProject && (
+        <section className="next-project">
+          <Link
+            to={`/projects/${nextProject.slug}`}
+            className="next-project-link"
           >
-            {link.label}
-          </a>
-        ))}
-      </div>
+            <h2>Næste Projekt</h2>
+          </Link>
+        </section>
+      )}
     </article>
   );
 }

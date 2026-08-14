@@ -68,8 +68,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-intro" style={{ gridColumn: "6 / 8", gridRow: 3 }}>
-          Jeg er en digital og grafisk designer med en passion for at skabe
-          design, der ikke bare ser flot ud, men også giver mening og værdi.
+         Jeg er digital designer og udvikler, og jeg skaber intuitive og enkle digitale oplevelser — design, der føles, ikke bare ses.
           <br />
           <br />
           – Laura Lynge Nielsen

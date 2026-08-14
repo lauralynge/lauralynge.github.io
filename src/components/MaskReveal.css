@@ -1,0 +1,16 @@
+.mask-reveal-wrapper {
+  overflow: hidden; /* skjuler teksten, indtil den glider op */
+}
+
+.mask-reveal-inner {
+  transform: translateY(100%);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.8s ease;
+}
+
+.mask-reveal-inner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}

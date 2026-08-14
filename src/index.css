@@ -204,8 +204,85 @@ p {
 
 .page {
   padding: 8rem 8rem;
-    
-  }
+}
+
+/* Generelt sektions title line*/
+
+/* --- Understregning af sektionstitel --- */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* fuld bredde */
+  height: 1px;
+  background: var(--blue);
+  margin-bottom: 2rem;
+}
+
+/* ----------------------------- */
+/* AboutPage.jsx styling            */
+/* ----------------------------- */
+
+/* Intro-sektion: billede + tekst + vertikal streg */
+.section-intro {
+  display: flex;
+  align-items: flex-end; /* Tekst flugter med bunden af billedet */
+  position: relative;
+  margin-bottom: 2rem;
+  gap: 4rem;
+}
+
+/* Lodret streg */
+.section-intro-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0; /* <-- fuld højde */
+  width: 1px;
+  background: var(--blue);
+  left: calc(
+    28rem + 2rem
+  ); /* Stregen skal stå ved billedets bredde + 2rem luft */
+}
+
+/* Billede */
+.section-intro-image img {
+  width: 100%;
+  max-width: 28rem;
+  border-radius: var(--border-radius-large);
+  object-fit: cover;
+}
+
+/* Resume link i hjørnet af hele sektionen */
+.resume-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.resume-link a {
+  display: flex; /* <-- gør at de ligger side om side */
+  align-items: baseline; /* <-- giver samme baseline */
+  gap: 0.5rem; /* <-- afstand mellem tekst og ikon */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.resume-link a:hover {
+  border-bottom: 1px solid;
+}
+
+/* Tekstkolonne */
+.section-intro-text {
+  flex: 1;
+}
+
+.resume-link img {
+  height: 0.75rem; /* <-- gør ikonet typografisk “jævnt” */
+  display: block; /* <-- fjerner ekstra spacing */
+}
 
 /* ----------------------------- */
 /* RESPONSIVE DESIGN            */

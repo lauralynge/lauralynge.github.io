@@ -6,6 +6,8 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  padding-bottom: 0.15em; /* giver plads til descenders (p, j, g, y) */
+  margin-bottom: -0.15em; /* modvirker at det skubber linjen ned */
 }
 
 .reveal-letter-inner {

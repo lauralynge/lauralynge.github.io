@@ -1,0 +1,28 @@
+.image-row {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.image-row-1 {
+  grid-template-columns: 1fr;
+}
+
+.image-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.image-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
+}

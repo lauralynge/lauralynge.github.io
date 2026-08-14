@@ -1,0 +1,38 @@
+.site-footer {
+  position: relative;
+  z-index: 1;
+  background-color: #fdf8f0;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.footer-links a {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--blue);
+  text-decoration: none;
+  border-right: 1px solid var(--blue);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer-links a:last-child {
+  border-right: none;
+}
+
+.footer-links a:hover {
+  background-color: var(--blue);
+  color: var(
+    --white
+  );
+}
+
+.footer-bottom {
+  text-align: center;
+}

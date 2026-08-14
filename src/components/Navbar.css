@@ -31,6 +31,16 @@
   background: var(--green);
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center; /* ← dette centrerer logoet i kolonne 2 */
+  width: 4rem;
+  height: auto;
+  text-decoration: none;
+}
+
 /* Sticky navbar der dukker op når man scroller ned */
 .navbar-fixed {
   position: fixed;

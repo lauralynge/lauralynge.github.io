@@ -7,7 +7,7 @@ export default function ProjectCard({ project, index }) {
   return (
     <Link to={`/projects/${project.slug}`} className="project-card">
       <WipeReveal className="project-card-image">
-        <img src={project.image} alt={project.title} />
+        <img src={project.mainImage} alt={project.title} />
       </WipeReveal>
 
       <FadeIn delay={index * 100}>

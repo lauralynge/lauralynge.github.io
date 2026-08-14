@@ -9,14 +9,18 @@
   grid-template-columns: 1.2fr 1fr auto;
   align-items: stretch;
   gap: 2rem;
-  padding: 8rem 8rem;
+  padding: 5rem 8rem;
   border-top: 1px solid var(--blue);
 }
 
-.home-footer-text h2 {
+.home-footer-text {
   display: flex;
   align-items: center;
+}
+
+.home-footer-text h2 {
   margin: 0;
+  line-height: 0;
 }
 
 .home-footer-contact {
@@ -32,10 +36,10 @@
   gap: 0.5rem;
   border-left: 1px solid var(--blue);
   padding-left: 8rem;
-  margin: -8rem 0;      /* modvirker top/bund-padding fra .home-footer-top */
-  padding-top: 8rem;    /* genskaber den visuelle afstand til ikonerne */
-  padding-bottom: 8rem;
-  height: auto;         /* height: 100% er ikke længere nødvendig */
+  margin: -5rem 0; /* modvirker top/bund-padding fra .home-footer-top */
+  padding-top: 5rem; /* genskaber den visuelle afstand til ikonerne */
+  padding-bottom: 5rem;
+  height: auto; /* height: 100% er ikke længere nødvendig */
 }
 
 .home-footer-socials a {
@@ -49,14 +53,14 @@
   color: var(--blue);
 }
 .home-footer-socials a img {
-  width: 22px;   /* eller 24px, 28px, 32px */
+  width: 22px; /* eller 24px, 28px, 32px */
   height: 22px;
   object-fit: contain;
 }
 
 .home-footer-bottom {
   display: flex;
-  align-items: center;     /* ← vertikal centrering */
+  align-items: center; /* ← vertikal centrering */
   justify-content: center; /* ← horisontal centrering */
   padding: 0.5rem 0;
   color: var(--blue);

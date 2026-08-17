@@ -1,27 +1,24 @@
+import RevealText from "../components/RevealText";
+
 function ContactPage() {
   return (
-    <div className="page narrow">
-      <p className="eyebrow">Kontakt</p>
-      <h1>Lad os tale sammen.</h1>
-      <p className="lead">
-        Tilpas links og mailadresse, så siden peger på dine egne profiler.
-      </p>
+    <div className="page contact-page-grid">
+      <section className="section-title">
+        <RevealText as="h1">Lad os tale sammen</RevealText>
+      </section>
 
-      <ul className="contact-list">
-        <li>
-          <a href="mailto:dinmail@example.com">dinmail@example.com</a>
-        </li>
-        <li>
-          <a href="https://github.com/username" rel="noreferrer" target="_blank">
-            GitHub
+      <div className="contact-row">
+        <div className="contact-details">
+          <h3>Kontakt</h3>
+          <a className="contact-line" href="mailto:laurablynge@gmail.com">
+            laurablynge@gmail.com
           </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com" rel="noreferrer" target="_blank">
-            LinkedIn
+          <a className="contact-line" href="tel:+4522406855">
+            22 40 68 55
           </a>
-        </li>
-      </ul>
+          <p className="contact-line">Silkeborg</p>
+        </div>
+      </div>
     </div>
   );
 }

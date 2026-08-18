@@ -5,11 +5,8 @@ import "./Hero.css";
 import Navbar from "./Navbar";
 import { initHeroAnimations } from "../utils/HeroAnimations";
 
-
-
 export default function Hero() {
-
- const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     // Kun kør animationen når vi er på forsiden
@@ -18,13 +15,18 @@ export default function Hero() {
       const designer = document.querySelector(".designer");
       const developer = document.querySelector(".developer");
 
+      if (!digital || !designer || !developer) return;
+
       // Nulstil klasser
       digital.classList.remove("slide-in", "slide-right-out");
       designer.classList.remove("slide-in", "slide-left-out");
       developer.classList.remove("slide-in", "slide-right-out");
 
-      // Genstart animationen
-      initHeroAnimations();
+      // Genstart animationen og gem cleanup-funktionen
+      const cleanup = initHeroAnimations();
+
+      // Fjern scroll-listener igen ved unmount / route-skift
+      return cleanup;
     }
   }, [location.pathname]);
 
@@ -56,22 +58,31 @@ export default function Hero() {
           style={{ gridColumn: 8, gridRow: 4, animationDelay: "1.5s" }}
         />
 
-        <h1 className="hero-title slide-right digital " style={{ gridColumn: "3 / 6", gridRow: 1 }}>
+        <h1
+          className="hero-title slide-right digital"
+          style={{ gridColumn: "3 / 6", gridRow: 1 }}
+        >
           Digital
         </h1>
 
-        <h1 className="hero-title slide-left designer has-slash" style={{ gridColumn: "4 / 7", gridRow: 2 }}>
+        <h1
+          className="hero-title slide-left designer has-slash"
+          style={{ gridColumn: "4 / 7", gridRow: 2 }}
+        >
           Designer
         </h1>
-        <h1 className="hero-title slide-right developer" style={{ gridColumn: "2 / 5", gridRow: 3 }}>
+        <h1
+          className="hero-title slide-right developer"
+          style={{ gridColumn: "2 / 5", gridRow: 3 }}
+        >
           Developer
         </h1>
 
         <p className="hero-intro" style={{ gridColumn: "6 / 8", gridRow: 3 }}>
-         Jeg er digital designer og udvikler, og jeg skaber intuitive og enkle digitale oplevelser — design, der føles, ikke bare ses.
+          Jeg er digital designer og udvikler, og jeg skaber intuitive og enkle
+          digitale oplevelser — design, der føles, ikke bare ses.
           <br />
-          <br />
-          – Laura Lynge Nielsen
+          <br />– Laura Lynge Nielsen
         </p>
       </div>
     </section>

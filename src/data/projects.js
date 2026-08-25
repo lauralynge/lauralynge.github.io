@@ -11,7 +11,7 @@ const projects = [
     tags: ["UX", "UI", "Webapp"],
     mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
     rows: [
-      ["/images/placeholder.png"], // 1 billede → grid-1
+      ["/images/rumly-2-hvid.svg"], // 1 billede → grid-1
       ["/images/placeholder.png", "/images/placeholder.png"], // 2 billeder → grid-2
       [
         "/images/placeholder.png",

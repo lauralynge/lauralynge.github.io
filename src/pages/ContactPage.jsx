@@ -11,12 +11,12 @@ function ContactPage() {
         <div className="contact-details">
           <h3>Kontakt</h3>
           <a className="contact-line" href="mailto:laurablynge@gmail.com">
-            laurablynge@gmail.com
+            lauralynge@gmail.com
           </a>
-          <a className="contact-line" href="tel:+4522406855">
-            22 40 68 55
+          <a className="contact-line" href="tel:+4523406755">
+            23 40 67 55
           </a>
-          <p className="contact-line">Silkeborg</p>
+          <p className="contact-line">Aarhus N</p>
         </div>
       </div>
     </div>

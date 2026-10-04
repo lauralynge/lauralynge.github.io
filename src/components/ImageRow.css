@@ -20,8 +20,10 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.image-row img {
+.image-row img,
+.image-row video {
   width: 100%;
+  display: block;
   height: auto;
   object-fit: cover;
   border-radius: var(--border-radius-large);

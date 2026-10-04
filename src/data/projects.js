@@ -9,45 +9,81 @@ const projects = [
     description:
       "At handle børnetøj online handler for mange forældre om mere end at finde det rigtige produkt – det handler om at kunne stole på kvaliteten, uden at kunne mærke stoffet i hånden. Sammen med min gruppe designede og udviklede jeg en webshop-prototype til det fiktive børnetøjsmærke Little Looms, bygget til netop den usikkerhed: tydelig produktinformation, en størrelsesguide der tager tvivlen væk, og en rolig, skandinavisk visuel identitet, der signalerer kvalitet uden at råbe om det. Gennem kortsortering, tree testing og gentagne brugertests formede vi en informationsarkitektur, der gør det enkelt at navigere fra inspiration til køb. Designet blev udviklet i Figma – med eget design system og brand guideline – og realiseret som en kodet frontend-løsning i React, for at skabe en shoppingoplevelse, der føles lige så tryg som at handle i en fysisk butik.",
     tags: ["Branding", "UI", "Frontend"],
-    mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    mainImage: `${import.meta.env.BASE_URL}images/little-looms/little-looms-thumbnail.png`,
     content: [
-      { type: "images", images: ["/images/placeholder.png"] },
+      {
+        type: "images",
+        images: ["/images/little-looms/little-looms-hero.png"],
+      },
       {
         type: "text",
         heading: "Et skandinavisk univers i børnehøjde",
-        body: "Brandidentiteten er skabt til at føles varm, rolig og legende — uden at blive barnlig.",
+        body: "Brandidentiteten er skabt til at føles varm, rolig og legende — uden at blive barnlig. Pasteller, håndtegnede elementer og et minimalistisk layout skaber et univers, der både taler til forældrenes æstetiske sans og barnets verden. Det visuelle udtryk er designet til at understøtte en følelse af kvalitet, uden at råbe om det.",
       },
-      { type: "images", images: ["/images/placeholder.png"] },
-      {
-        type: "images",
-        images: ["/images/placeholder.png", "/images/placeholder.png"],
-      },
-      { type: "images", images: ["/images/placeholder.png"] },
-      { type: "text", heading: "Overskrift 2", body: "Tekst kommer" },
-      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "images", images: ["/videos/little-looms/hero-animation.mp4"] },
       {
         type: "images",
         images: [
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-          "/images/placeholder.png",
+          "/images/little-looms/smiley.png",
+          "/images/little-looms/clouds.png",
         ],
       },
-      { type: "images", images: ["/images/placeholder.png"] },
-      { type: "images", images: ["/images/placeholder.png"] },
-      { type: "text", heading: "Overskrift 3", body: "Tekst kommer" },
       {
         type: "images",
-        images: ["/images/placeholder.png", "/images/placeholder.png"],
+        images: ["/videos/little-looms/brand-guideline-animation.mp4"],
+      },
+      {
+        type: "text",
+        heading: "Fra inspiration til køb",
+        body: "Webshoppen er designet til forældre, der vil handle trygt uden at bruge tid på at lede. Tydelige kategorier, filtrering og en størrelsesguide gør det let at finde det rigtige, mens rolige flader og store produktbilleder lader tøjet tale for sig selv. Resultatet er en oplevelse, der føles lige så overskuelig som at stå med produktet i hånden.",
       },
       {
         type: "images",
-        images: ["/images/placeholder.png", "/images/placeholder.png"],
+        images: ["/images/little-looms/desktop-girl-productpage.png"],
       },
-      { type: "images", images: ["/images/placeholder.png"] },
-      { type: "text", heading: "Overskrift 4", body: "Tekst kommer" },
-      { type: "images", images: ["/images/placeholder.png"] },
-      { type: "images", images: ["/images/placeholder.png"] },
+      {
+        type: "images",
+        images: [
+          "/images/little-looms/desktop-product-detail.png",
+          "/images/little-looms/desktop-size-guide.png",
+          "/images/little-looms/desktop-basket.png",
+        ],
+      },
+      { type: "images", images: ["/images/little-looms/iphone-frames.png"] },
+      { type: "images", images: ["/images/little-looms/badges.png"] },
+      {
+        type: "text",
+        heading: "Et univers, der rækker ud over skærmen",
+        body: "Little Looms skulle føles genkendeligt i alle møder med brandet — ikke kun på webshoppen. På sociale medier bringer håndtegnede elementer børnenes verden til live i korte animationer, og emballagen viderefører det samme rolige, legende udtryk, når pakken lander hjemme. Sammen skaber de en sammenhængende oplevelse fra første opslag til udpakning.",
+      },
+      {
+        type: "images",
+        images: [
+          "/images/little-looms/some-clouds.png",
+          "/videos/little-looms/some-carousel-animation.mp4",
+        ],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/little-looms/some-sun-boy.png",
+          "/images/little-looms/some-flower-girl.png",
+        ],
+      },
+      {
+        type: "images",
+        images: ["/images/little-looms/little-looms-wrapping.png"],
+      },
+      {
+        type: "text",
+        heading: "Fra skitse til endeligt design",
+        body: "Processen begyndte som en løs idé på papir, hvor struktur og flow blev tegnet op i sin mest simple form. Personaen Sofie var et tidligt pejlemærke, der gjorde det tydeligt, hvordan navigation og produktinformation skulle støtte en travl forælder i en hurtig beslutningsproces. Wireframes gav retningen skarphed og viste, hvordan hun skulle bevæge sig gennem oplevelsen. I den sidste fase blev alt samlet i en high‑fidelity prototype, hvor form, farver og detaljer faldt på plads og gav Little Looms sit endelige udtryk.",
+      },
+      { type: "images", images: ["/images/little-looms/persona-sofie.png"] },
+      {
+        type: "images",
+        images: ["/images/little-looms/prototyping-iterations.png"],
+      },
     ],
     team: [
       "Caroline Majlandt Clorius",
@@ -67,7 +103,7 @@ const projects = [
       },
       {
         label: "Figma Prototype Mobile",
-        href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Costumer-Experience?node-id=3752-12414&t=VBF3M4br0Pwq6BgS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3752%3A12414&desktop-link-click-timestamp=1789996075914&desktop-ul-exp-bucket=V&page-id=954%3A6",
+        href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Costumer-Experience?node-id=7586-117301&viewport=-4866%2C-411%2C0.13&t=X5IH15XHGVdvXhi6-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7586%3A117301&show-proto-sidebar=1&page-id=7586%3A33876",
       },
     ],
   },

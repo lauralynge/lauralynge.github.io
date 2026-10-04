@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import projects from "../data/projects";
 import ImageRow from "../components/ImageRow";
 import FadeIn from "../components/FadeIn";
+import TextBlock from "../components/TextBlock";
 import "./ProjectPage.css";
 
 function ProjectPage() {
@@ -48,10 +49,14 @@ function ProjectPage() {
       </section>
 
       <section className="section-mockups">
-        {/* Indhold - billeder */}
-        {project.rows.map((row, i) => (
+        {/* Gennemløb indholdsblokkene og vælg komponent ud fra type */}
+        {project.content.map((block, i) => (
           <FadeIn delay={i * 300} key={i}>
-            <ImageRow images={row} />
+            {block.type === "text" ? (
+              <TextBlock heading={block.heading} body={block.body} />
+            ) : (
+              <ImageRow images={block.images} />
+            )}
           </FadeIn>
         ))}
       </section>

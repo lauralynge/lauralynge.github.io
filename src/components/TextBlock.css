@@ -1,0 +1,9 @@
+/* Smal, venstrestillet tekstkolonne som i designet */
+.text-block {
+  max-width: 50%;
+  margin: 3rem 0;
+}
+
+.text-block h3 {
+  margin-bottom: 1rem;
+}

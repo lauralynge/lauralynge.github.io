@@ -1,29 +1,53 @@
 const projects = [
   {
-    slug: "rumly",
-    title: "Rumly",
-    subtitle: "En digital løsning til roomie søgning.",
-    eyebrow: "Webapp & onboarding",
+    slug: "little-looms",
+    title: "Little Looms",
+    subtitle: "En webshop med fokus på branding og UI‑design",
+    eyebrow: "Webshop & branding",
     year: "2025",
-    summary: "En digital løsning til rumstyring og booking.",
+    summary: "En webshop med fokus på branding og UI‑design",
     description:
-      "At finde en roomie handler om mere end fire vægge og en delt husleje – det handler om tillid, kemi og tryghed i sin egen hverdag. Alligevel må de fleste unge i dag navigere i ustrukturerede opslag på sociale medier, hvor kompatibilitet er umulig at afkode, og risikoen for dårlige matches er høj. Sammen med min gruppe designede og udviklede jeg Rumly – en app, der samler boligsøgning og roomie-matching ét sted, bygget på en matchscore, der gør kompatibilitet konkret og synlig. Gennem interviews, kortsortering og gentagne brugertests formede vi en løsning bygget på tre principper: tryg, venlig og social. Designet blev udviklet i Figma og realiseret som en kodet prototype i React med Supabase som backend – for at skabe en oplevelse, der føles så tryg som at finde et rigtigt hjem.",
-    tags: ["UX", "UI", "Webapp"],
+      "At handle børnetøj online handler for mange forældre om mere end at finde det rigtige produkt – det handler om at kunne stole på kvaliteten, uden at kunne mærke stoffet i hånden. Sammen med min gruppe designede og udviklede jeg en webshop-prototype til det fiktive børnetøjsmærke Little Looms, bygget til netop den usikkerhed: tydelig produktinformation, en størrelsesguide der tager tvivlen væk, og en rolig, skandinavisk visuel identitet, der signalerer kvalitet uden at råbe om det. Gennem kortsortering, tree testing og gentagne brugertests formede vi en informationsarkitektur, der gør det enkelt at navigere fra inspiration til køb. Designet blev udviklet i Figma – med eget design system og brand guideline – og realiseret som en kodet frontend-løsning i React, for at skabe en shoppingoplevelse, der føles lige så tryg som at handle i en fysisk butik.",
+    tags: ["Branding", "UI", "Frontend"],
     mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
-    rows: [
-      ["/images/rumly-2-hvid.svg"], // 1 billede → grid-1
-      ["/images/placeholder.png", "/images/placeholder.png"], // 2 billeder → grid-2
-      [
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-      ], // 3 billeder → grid-3
-      [
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-      ], // 4 billeder → grid-4
+    content: [
+      { type: "images", images: ["/images/placeholder.png"] },
+      {
+        type: "text",
+        heading: "Et skandinavisk univers i børnehøjde",
+        body: "Brandidentiteten er skabt til at føles varm, rolig og legende — uden at blive barnlig.",
+      },
+      { type: "images", images: ["/images/placeholder.png"] },
+      {
+        type: "images",
+        images: ["/images/placeholder.png", "/images/placeholder.png"],
+      },
+      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "text", heading: "Overskrift 2", body: "Tekst kommer" },
+      { type: "images", images: ["/images/placeholder.png"] },
+      {
+        type: "images",
+        images: [
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+        ],
+      },
+      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "text", heading: "Overskrift 3", body: "Tekst kommer" },
+      {
+        type: "images",
+        images: ["/images/placeholder.png", "/images/placeholder.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/placeholder.png", "/images/placeholder.png"],
+      },
+      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "text", heading: "Overskrift 4", body: "Tekst kommer" },
+      { type: "images", images: ["/images/placeholder.png"] },
+      { type: "images", images: ["/images/placeholder.png"] },
     ],
     team: [
       "Caroline Majlandt Clorius",
@@ -35,11 +59,68 @@ const projects = [
     links: [
       {
         label: "Live Site",
-        href: "https://username.github.io",
+        href: "https://carolineclorius.github.io/customer-experience-exam/",
+      },
+      {
+        label: "Figma Prototype Desktop",
+        href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Costumer-Experience?node-id=2580-987&t=VBF3M4br0Pwq6BgS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2580%3A987&desktop-link-click-timestamp=1789996075914&desktop-ul-exp-bucket=V&page-id=954%3A6",
+      },
+      {
+        label: "Figma Prototype Mobile",
+        href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Costumer-Experience?node-id=3752-12414&t=VBF3M4br0Pwq6BgS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3752%3A12414&desktop-link-click-timestamp=1789996075914&desktop-ul-exp-bucket=V&page-id=954%3A6",
+      },
+    ],
+  },
+  {
+    slug: "rumly",
+    title: "Rumly",
+    subtitle: "En digital løsning til roomie søgning",
+    eyebrow: "Webapp & onboarding",
+    year: "2025",
+    summary: "En digital løsning til rumstyring og booking.",
+    description:
+      "At finde en roomie handler om mere end fire vægge og en delt husleje – det handler om tillid, kemi og tryghed i sin egen hverdag. Alligevel må de fleste unge i dag navigere i ustrukturerede opslag på sociale medier, hvor kompatibilitet er umulig at afkode, og risikoen for dårlige matches er høj. Sammen med min gruppe designede og udviklede jeg Rumly – en app, der samler boligsøgning og roomie-matching ét sted, bygget på en matchscore, der gør kompatibilitet konkret og synlig. Gennem interviews, kortsortering og gentagne brugertests formede vi en løsning bygget på tre principper: tryg, venlig og social. Designet blev udviklet i Figma og realiseret som en kodet prototype i React med Supabase som backend – for at skabe en oplevelse, der føles så tryg som at finde et rigtigt hjem.",
+    tags: ["UX", "UI", "Webapp"],
+    mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    content: [
+      { type: "images", images: ["/images/placeholder.png"] }, // 1 billede → grid-1
+      {
+        type: "images",
+        images: ["/images/placeholder.png", "/images/placeholder.png"],
+      }, // 2 billeder → grid-2
+      {
+        type: "images",
+        images: [
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+        ], // 3 billeder → grid-3
+      },
+      {
+        type: "images",
+        images: [
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+        ], // 4 billeder → grid-4
+      },
+    ],
+    team: [
+      "Caroline Majlandt Clorius",
+      "Cecilie Vestergaard Andersen",
+      "Freia Mandrup Krog",
+      "Mia Poder Olesen",
+      "Laura Lynge Nielsen",
+    ],
+    links: [
+      {
+        label: "Live Site",
+        href: "https://cecilieva.github.io/webapp-eksamensprojekt/?fbclid=IwY2xjawSLnOpleHRuA2FlbQIxMABicmlkETFqUmRsYXFlT0VERHZvNk12c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuT8ItRezfG7sRZd69HAPqAKU9KtvDzLQ1C7KVUlzSWXr1GEAGMMidK9Y-B-_aem_9ed94Kho79SAPk9EWKdtCQ",
       },
       {
         label: "Figma Prototype",
-        href: "https://github.com/username/username.github.io",
+        href: "https://www.figma.com/proto/yiLh5FD1vqunvvlJpx0qGb/Webapp-Eksamensprojekt?node-id=1109-3265&t=ZZ5rPqX5QnnWzIYo-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1109%3A3265&desktop-link-click-timestamp=1789996316119&desktop-ul-exp-bucket=V&page-id=51%3A30",
       },
       {
         label: "GitHub Repo",
@@ -54,80 +135,38 @@ const projects = [
     subtitle: "En interaktiv oplevelse",
     eyebrow: "Interaktiv touchskærm",
     year: "2024",
-    summary: "Interaktiv touchskærmsoplevelse designet til et akvarie‑miljø.",
+    summary: "Interaktiv touchskærmsoplevelse designet til et akvarie‑miljø",
     description:
       "Akvariet i Storcenter Nord ønskede at gøre viden om havets dyr til noget børn ikke bare læser, men opdager. Gennem observationer og samtaler med børnefamilier i akvariet designede og udviklede jeg en interaktiv touchskærm-prototype, hvor fisk og skabninger kommer til live gennem bevægelse og leg. Tanken var enkel: børn lærer bedst, når de selv får lov at trykke, udforske og blive overraskede. Legende illustrationer og en nysgerrig krabbe som guide møder en simpel, intuitiv interaktion, bygget i Figma og kodet i HTML, CSS og JavaScript – for at skabe en oplevelse, der føles som leg, men fungerer som læring.",
     tags: ["Interaktivt design", "Grafisk design", "UX"],
     mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
-    rows: [
-      ["/images/placeholder.png"], // 1 billede → grid-1
-      ["/images/placeholder.png", "/images/placeholder.png"], // 2 billeder → grid-2
-      [
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-      ], // 3 billeder → grid-3
+    content: [
+      {
+        type: "images",
+        images: ["/images/placeholder.png"],
+      }, // 1 billede → grid-1
+      {
+        type: "images",
+        images: ["/images/placeholder.png", "/images/placeholder.png"],
+      }, // 2 billeder → grid-2
+      {
+        type: "images",
+        images: [
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+          "/images/placeholder.png",
+        ], // 3 billeder → grid-3
+      },
     ],
     team: ["Laura Lynge Nielsen"],
     links: [
       {
         label: "Live Site",
-        href: "https://username.github.io",
-      },
-      {
-        label: "Figma Prototype",
-        href: "https://github.com/username/username.github.io",
-      },
-      {
-        label: "GitHub Repo",
-        href: "https://github.com/username/username.github.io",
+        href: "https://lauralynge.github.io/Eksamen_Akvarie/",
       },
     ],
   },
 
-  {
-    slug: "little-looms",
-    title: "Little Looms",
-    subtitle: "En webshop med fokus på branding og UI‑design.",
-    eyebrow: "Webshop & branding",
-    year: "2025",
-    summary: "En webshop med fokus på branding og UI‑design.",
-    description:
-      "At handle børnetøj online handler for mange forældre om mere end at finde det rigtige produkt – det handler om at kunne stole på kvaliteten, uden at kunne mærke stoffet i hånden. Sammen med min gruppe designede og udviklede jeg en webshop-prototype til det fiktive børnetøjsmærke Little Looms, bygget til netop den usikkerhed: tydelig produktinformation, en størrelsesguide der tager tvivlen væk, og en rolig, skandinavisk visuel identitet, der signalerer kvalitet uden at råbe om det. Gennem kortsortering, tree testing og gentagne brugertests formede vi en informationsarkitektur, der gør det enkelt at navigere fra inspiration til køb. Designet blev udviklet i Figma – med eget design system og brand guideline – og realiseret som en kodet frontend-løsning i React, for at skabe en shoppingoplevelse, der føles lige så tryg som at handle i en fysisk butik.",
-    tags: ["Branding", "UI", "Frontend"],
-    mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
-    rows: [
-      ["/images/placeholder.png"], // 1 billede → grid-1
-      ["/images/placeholder.png", "/images/placeholder.png"], // 2 billeder → grid-2
-      [
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-        "/images/placeholder.png",
-      ], // 3 billeder → grid-3
-      ["/images/placeholder.png", "/images/placeholder.png"], // 2 billeder → grid-2
-    ],
-    team: [
-      "Caroline Majlandt Clorius",
-      "Cecilie Vestergaard Andersen",
-      "Freia Mandrup Krog",
-      "Mia Poder Olesen",
-      "Laura Lynge Nielsen",
-    ],
-    links: [
-      {
-        label: "Live Site",
-        href: "https://username.github.io",
-      },
-      {
-        label: "Figma Prototype",
-        href: "https://github.com/username/username.github.io",
-      },
-      {
-        label: "GitHub Repo",
-        href: "https://github.com/username/username.github.io",
-      },
-    ],
-  },
   {
     slug: "mellemrum",
     title: "Mellemrum",
@@ -140,7 +179,16 @@ const projects = [
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
     rows: [["/images/coming-soon-big.svg"]],
     team: ["Laura Lynge Nielsen"],
-    links: [],
+    links: [
+      {
+        label: "Live Site",
+        href: "https://lauralynge.github.io/mellemrum-case-1//",
+      },
+      {
+        label: "Github Repo",
+        href: "https://github.com/lauralynge/mellemrum-case-1",
+      },
+    ],
   },
   {
     slug: "case-2",
@@ -151,9 +199,19 @@ const projects = [
     description: "Beskrivelsen af projektet her.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
+    content: [
+      {
+        type: "images",
+        images: ["/images/coming-soon-big.svg"],
+      },
+    ],
     team: ["Laura Lynge Nielsen"],
-    links: [],
+    links: [
+      {
+        label: "Figma Prototype",
+        href: "https://lauralynge.github.io/mellemrum-case-1//",
+      },
+    ],
   },
   {
     slug: "case-3",
@@ -164,33 +222,12 @@ const projects = [
     description: "Beskrivelsen af projektet her.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
-    team: ["Laura Lynge Nielsen"],
-    links: [],
-  },
-  {
-    slug: "test-1",
-    title: "Stock grafik",
-    subtitle: "En samling af stock grafik",
-    eyebrow: "Grafik & design",
-    summary: "En samling af stock grafik.",
-    description: "Her leger jeg lidt med grafik",
-    tags: ["Grafik", "Design"],
-    mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
-    team: ["Laura Lynge Nielsen"],
-    links: [],
-  },
-  {
-    slug: "test-2",
-    title: "Plakater",
-    subtitle: "En samling af plakater",
-    eyebrow: "Grafik & design",
-    summary: "En samling af plakater.",
-    description: "Her leger jeg lidt med grafik",
-    tags: ["Grafik", "Design"],
-    mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
+    content: [
+      {
+        type: "images",
+        images: ["/images/coming-soon-big.svg"],
+      },
+    ],
     team: ["Laura Lynge Nielsen"],
     links: [],
   },

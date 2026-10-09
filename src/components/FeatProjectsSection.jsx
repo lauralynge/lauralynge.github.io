@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import projects from "../data/projects";
-import ProjectCard from "./FeatProjectsCard";
+import FeatProjectsCard from "./FeatProjectsCard";
 import useInView from "../hooks/useInView";
 import RevealText from "./RevealText";
 import FadeIn from "./FadeIn";
@@ -18,7 +18,7 @@ export default function FeatProjectSection() {
 
       <div className="feat-project-grid">
         {featured.map((project, index) => (
-          <ProjectCard key={project.slug} project={project} index={index} />
+          <FeatProjectsCard key={project.slug} project={project} index={index} />
         ))}
       </div>
 

@@ -6,10 +6,9 @@ export default function WipeReveal({
   as: Tag = "div",
   className = "",
   delay = 0,
+  once = false, // true → wipe kun første gang, derefter forbliver den synlig
 }) {
-  const [ref, isVisible] = useInView({ threshold: 0 });
-
-  console.log("WipeReveal:", className, "isVisible:", isVisible);
+  const [ref, isVisible] = useInView({ once });
 
   return (
     <Tag

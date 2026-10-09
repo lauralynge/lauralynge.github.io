@@ -4,14 +4,13 @@
   text-decoration: none;
   color: inherit;
   height: 45rem;
-  border-radius: var(--border-radius-small);
   overflow: hidden;
 }
 
 /* billedet */
 .project-card-image {
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: var(--border-radius-large);
   height: 35rem;
 }
 

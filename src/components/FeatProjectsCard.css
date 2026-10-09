@@ -26,7 +26,7 @@
 /* Billed-wrapperen */
 .feat-project-image {
   width: 100%;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-large);
   overflow: hidden; /* vigtig for zoom */
 }
 

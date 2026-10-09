@@ -10,6 +10,7 @@ const projects = [
       "At handle børnetøj online handler for mange forældre om mere end at finde det rigtige produkt – det handler om at kunne stole på kvaliteten, uden at kunne mærke stoffet i hånden. Sammen med min gruppe designede og udviklede jeg en webshop-prototype til det fiktive børnetøjsmærke Little Looms, bygget til netop den usikkerhed: tydelig produktinformation, en størrelsesguide der tager tvivlen væk, og en rolig, skandinavisk visuel identitet, der signalerer kvalitet uden at råbe om det. Gennem kortsortering, tree testing og gentagne brugertests formede vi en informationsarkitektur, der gør det enkelt at navigere fra inspiration til køb. Designet blev udviklet i Figma – med eget design system og brand guideline – og realiseret som en kodet frontend-løsning i React, for at skabe en shoppingoplevelse, der føles lige så tryg som at handle i en fysisk butik.",
     tags: ["Branding", "UI", "Frontend"],
     mainImage: `${import.meta.env.BASE_URL}images/little-looms/little-looms-thumbnail.png`,
+    gridImage: `${import.meta.env.BASE_URL}images/little-looms/little-looms-grid-thumbnail.png`,
     content: [
       {
         type: "images",
@@ -30,7 +31,7 @@ const projects = [
       },
       {
         type: "images",
-        images: ["/videos/little-looms/brand-guideline-animation.mp4"],
+        images: ["/videos/little-looms/brand-guideline.mp4"],
       },
       {
         type: "text",
@@ -118,6 +119,7 @@ const projects = [
       "At finde en roomie handler om mere end fire vægge og en delt husleje – det handler om tillid, kemi og tryghed i sin egen hverdag. Alligevel må de fleste unge i dag navigere i ustrukturerede opslag på sociale medier, hvor kompatibilitet er umulig at afkode, og risikoen for dårlige matches er høj. Sammen med min gruppe designede og udviklede jeg Rumly – en app, der samler boligsøgning og roomie-matching ét sted, bygget på en matchscore, der gør kompatibilitet konkret og synlig. Gennem interviews, kortsortering og gentagne brugertests formede vi en løsning bygget på tre principper: tryg, venlig og social. Designet blev udviklet i Figma og realiseret som en kodet prototype i React med Supabase som backend – for at skabe en oplevelse, der føles så tryg som at finde et rigtigt hjem.",
     tags: ["UX", "UI", "Webapp"],
     mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    gridImage: `${import.meta.env.BASE_URL}placeholder.png`,
     content: [
       { type: "images", images: ["/images/placeholder.png"] }, // 1 billede → grid-1
       {
@@ -176,6 +178,7 @@ const projects = [
       "Akvariet i Storcenter Nord ønskede at gøre viden om havets dyr til noget børn ikke bare læser, men opdager. Gennem observationer og samtaler med børnefamilier i akvariet designede og udviklede jeg en interaktiv touchskærm-prototype, hvor fisk og skabninger kommer til live gennem bevægelse og leg. Tanken var enkel: børn lærer bedst, når de selv får lov at trykke, udforske og blive overraskede. Legende illustrationer og en nysgerrig krabbe som guide møder en simpel, intuitiv interaktion, bygget i Figma og kodet i HTML, CSS og JavaScript – for at skabe en oplevelse, der føles som leg, men fungerer som læring.",
     tags: ["Interaktivt design", "Grafisk design", "UX"],
     mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    gridImage: `${import.meta.env.BASE_URL}placeholder.png`,
     content: [
       {
         type: "images",
@@ -213,6 +216,7 @@ const projects = [
     description: "Beskrivelsen af projektet her.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
     rows: [["/images/coming-soon-big.svg"]],
     team: ["Laura Lynge Nielsen"],
     links: [
@@ -235,6 +239,7 @@ const projects = [
     description: "Beskrivelsen af projektet her.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
     content: [
       {
         type: "images",
@@ -258,6 +263,7 @@ const projects = [
     description: "Beskrivelsen af projektet her.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
     content: [
       {
         type: "images",

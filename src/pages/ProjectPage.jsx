@@ -49,9 +49,16 @@ function ProjectPage() {
       </section>
 
       <section className="section-mockups">
-        {/* Gennemløb indholdsblokkene og vælg komponent ud fra type */}
+        {/* Gennemløb indholdsblokkene og vælg komponent ud fra type.
+            Hver blok fader ind, når 10% af den er inde på skærmen, med et kort fast delay */}
         {project.content.map((block, i) => (
-          <FadeIn delay={i * 300} key={i}>
+          <FadeIn
+            key={i}
+            once
+            delay={200}
+            duration={1000}
+            rootMargin="0px 0px -10% 0px"
+          >
             {block.type === "text" ? (
               <TextBlock heading={block.heading} body={block.body} />
             ) : (

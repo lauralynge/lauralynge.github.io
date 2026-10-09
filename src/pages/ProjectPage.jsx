@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import projects from "../data/projects";
 import ImageRow from "../components/ImageRow";
 import FadeIn from "../components/FadeIn";
+import TextBlock from "../components/TextBlock";
 import "./ProjectPage.css";
 
 function ProjectPage() {
@@ -48,10 +49,21 @@ function ProjectPage() {
       </section>
 
       <section className="section-mockups">
-        {/* Indhold - billeder */}
-        {project.rows.map((row, i) => (
-          <FadeIn delay={i * 300} key={i}>
-            <ImageRow images={row} />
+        {/* Gennemløb indholdsblokkene og vælg komponent ud fra type.
+            Hver blok fader ind, når 10% af den er inde på skærmen, med et kort fast delay */}
+        {project.content.map((block, i) => (
+          <FadeIn
+            key={i}
+            once
+            delay={200}
+            duration={1000}
+            rootMargin="0px 0px -10% 0px"
+          >
+            {block.type === "text" ? (
+              <TextBlock heading={block.heading} body={block.body} />
+            ) : (
+              <ImageRow images={block.images} />
+            )}
           </FadeIn>
         ))}
       </section>

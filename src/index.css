@@ -6,7 +6,7 @@
 
 :root {
   /* Typography scale */
-  --font-hero: 128px;
+  --font-hero: clamp(4.5rem, 8.9vw, 11rem); /* 128px på en 1440px skærm, skalerer med bredden */
   --font-h1: 96px;
   --font-h2: 48px;
   --font-h3: 20px;
@@ -53,7 +53,7 @@
 
   /* Grid */
   --grid-cols: 0.5fr repeat(6, 1fr) 0.5fr; /* 8 "kolonner", yderst er halve */
-  --grid-rows: repeat(4, 2fr); /* 4 "rækker", top/bund er halve */
+  --grid-rows: repeat(4, minmax(0, 2fr)); /* 4 "rækker" – minmax(0, …) så teksten ikke kan strække rækkerne */
   --grid-line: var(--blue);
   --row-h: 10vh;
 

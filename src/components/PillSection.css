@@ -24,10 +24,12 @@
 
 .pill-physics-container {
   position: relative;
-  width: 70%;
-  min-height: 400px;
+  /* Flydende: 100% bred og 460px høj på mobil (390px skærm)
+     → 70% bred og 400px høj på desktop (1440px skærm) */
+  width: clamp(70%, calc(100% - (100vw - 390px) * 0.338), 100%);
+  min-height: clamp(400px, calc(482px - 5.71vw), 460px);
   margin: 0 auto 0; /* top | venstre-højre (auto = centreret) | bund */
-  overflow: visible;
+  overflow: hidden; /* piller der skubbes/kastes ud af toppen forsvinder */
 }
 
 .pill {
@@ -35,14 +37,54 @@
   user-select: none; /* Du kan ikke markere tekst */
   pointer-events: auto; /* Hover virker */
   white-space: nowrap; /* Pillerne bryder ikke linjer */
-  padding: 10px 22px;
+  padding: clamp(9px, calc(8.6px + 0.1vw), 10px) 1.1em;
   background: var(--blue);
   color: var(--white);
   border-radius: 999px; /* Gør dem til piller */
-  font-size: 20px;
+  font-size: clamp(14px, calc(11.77px + 0.571vw), 20px); /* 14px mobil → 20px desktop */
   font-weight: 400;
   font-family: "Inter", sans-serif;
   transition: background 0.2s;
 }
 
+/******************************/
+/***    MOBIL (< 768px)     ***/
+/******************************/
 
+@media (max-width: 767px) {
+  /* "Hard skills" til venstre, "Ryst dem" til højre */
+  .pill-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .pill-section-title {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: var(--font-mobile-micro);
+    line-height: var(--line-relaxed);
+  }
+
+  .pill-shake-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--blue);
+    border-radius: 22px;
+    background: transparent;
+    color: var(--blue);
+    font-family: var(--font-sans);
+    font-size: var(--font-mobile-micro);
+    line-height: var(--line-relaxed);
+    cursor: pointer;
+  }
+
+  .pill-shake-button:active img {
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease;
+  }
+}

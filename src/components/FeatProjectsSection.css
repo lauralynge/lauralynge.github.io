@@ -4,7 +4,7 @@
   position: relative;
   z-index: 1;
   background: var(--white);
-  padding: 8rem 8rem;
+  padding: var(--page-pad-y) var(--page-gutter); /* samme flydende margin som .page */
 }
 
 .feat-project-grid {
@@ -82,7 +82,7 @@
 /* ----------------------------- */
 @media (max-width: 767px) {
   .feat-project-section {
-    padding: 3rem 18px 4rem;
+    padding-bottom: 4rem;
   }
 
   .feat-project-grid {

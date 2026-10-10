@@ -88,6 +88,11 @@
   --border-radius-small: 0.5rem;
   --border-radius-large: 1rem;
   --border-radius-card-mobile: 10px; /* projektkort på mobil (Figma) */
+
+  /* Sidemargin – glider fra 18px (390px skærm) til 128px (1440px skærm),
+     så layoutet ikke springer ved 768px */
+  --page-gutter: clamp(18px, calc(10.48vw - 22.9px), 8rem);
+  --page-pad-y: clamp(3rem, calc(7.62vw + 18.3px), 8rem); /* 48px → 128px */
 }
 
 /* Mobil: headerhøjde fra Figma ("Header/mobil") og fælles rækkehøjde */
@@ -242,7 +247,7 @@ p {
 /* Generel page styling */
 
 .page {
-  padding: 8rem 8rem;
+  padding: var(--page-pad-y) var(--page-gutter);
 }
 
 /* Generelt sektions title line*/
@@ -259,11 +264,11 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Mobil: sidepadding og sektionstitler som i Figma ("Projekter – iPhone").
+/* Mobil: bundpadding og sektionstitler som i Figma ("Projekter – iPhone").
    Ligger her, fordi index.css indlæses efter komponenternes CSS */
 @media (max-width: 767px) {
   .page {
-    padding: 3rem 18px 4rem;
+    padding-bottom: 4rem;
   }
 
   /* Sektionstitel – bruges også på ProjectsPage */

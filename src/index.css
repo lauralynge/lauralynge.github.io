@@ -87,6 +87,7 @@
   --border: 1px solid rgba(0, 0, 0, 0.08);
   --border-radius-small: 0.5rem;
   --border-radius-large: 1rem;
+  --border-radius-card-mobile: 10px; /* projektkort på mobil (Figma) */
 }
 
 /* Mobil: headerhøjde fra Figma ("Header/mobil") og fælles rækkehøjde */
@@ -256,6 +257,32 @@ p {
   height: 1px;
   background: var(--blue);
   margin-bottom: 2rem;
+}
+
+/* Mobil: sidepadding og sektionstitler som i Figma ("Projekter – iPhone").
+   Ligger her, fordi index.css indlæses efter komponenternes CSS */
+@media (max-width: 767px) {
+  .page {
+    padding: 3rem 18px 4rem;
+  }
+
+  /* Sektionstitel – bruges også på ProjectsPage */
+  .section-title {
+    padding-bottom: 18px;
+    margin-bottom: 1rem;
+  }
+
+  /* Stregen skal ligge helt i bunden (desktop rykker den op med margin) */
+  .section-title::after {
+    margin-bottom: 0;
+  }
+
+  .section-title h1 {
+    margin: 0;
+    font-size: var(--font-mobile-h1);
+    line-height: var(--line-mobile-display);
+    letter-spacing: var(--tracking-mobile-h1);
+  }
 }
 
 /* ----------------------------- */

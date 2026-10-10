@@ -76,3 +76,36 @@
 .feat-button:hover .feat-button-arrow {
   transform: translateX(10px);
 }
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* ----------------------------- */
+@media (max-width: 767px) {
+  .feat-project-section {
+    padding: 3rem 18px 4rem;
+  }
+
+  .feat-project-grid {
+    gap: 1rem;
+  }
+
+  .all-projects-button {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .feat-button {
+    height: 64px;
+    padding: 0;
+  }
+
+  .feat-button-text {
+    font-size: var(--font-mobile-h2);
+    line-height: var(--line-mobile-h2);
+  }
+
+  .feat-button-arrow {
+    width: 50px;
+    height: auto;
+  }
+}

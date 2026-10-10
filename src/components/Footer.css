@@ -36,3 +36,32 @@
 .footer-bottom {
   text-align: center;
 }
+
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* "Footer/mobil" i Figma: links i en 56px-række, © i en 40px-række */
+/* ----------------------------- */
+@media (max-width: 767px) {
+  .footer-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    padding: 0;
+  }
+
+  .footer-links h3 {
+    margin: 0; /* ellers skubber h3'ens bundmargin teksten op */
+    line-height: var(--line-tight);
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: var(--font-mobile-micro);
+    line-height: var(--line-relaxed);
+  }
+}

@@ -6,7 +6,7 @@
 
 :root {
   /* Typography scale */
-  --font-hero: 128px;
+  --font-hero: clamp(4.5rem, 8.9vw, 11rem); /* 128px på en 1440px skærm, skalerer med bredden */
   --font-h1: 96px;
   --font-h2: 48px;
   --font-h3: 20px;
@@ -16,6 +16,28 @@
   --line-tight: 1;
   --line-normal: 1.2;
   --line-relaxed: 1.4;
+
+  /* Typography scale – mobil (tekst-styles "Mobil/…" i Figma) */
+  --font-mobile-display: 56px; /* Digital / Designer / Developer */
+  --font-mobile-h1: 40px;
+  --font-mobile-h2: 30px;
+  --font-mobile-h3: 20px;
+  --font-mobile-body: 16px; /* Brødtekst */
+  --font-mobile-p: 14px; /* p + Undertekst */
+  --font-mobile-micro: 12px;
+
+  --line-mobile-display: 1.1; /* Display + H1 */
+  --line-mobile-h2: 1.15;
+  --line-mobile-body: 1.5; /* Brødtekst */
+
+  --tracking-mobile-display: -0.018em; /* -1px ved 56px */
+  --tracking-mobile-h1: -0.0125em; /* -0.5px ved 40px */
+  --font-mobile-menu: 36px; /* Mobil/H1 – menu */
+  --tracking-mobile-menu: -0.014em; /* -0.5px ved 36px */
+
+  /* Fonte */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
 
   /* Colors */
   --white: #fef9ee;
@@ -53,7 +75,7 @@
 
   /* Grid */
   --grid-cols: 0.5fr repeat(6, 1fr) 0.5fr; /* 8 "kolonner", yderst er halve */
-  --grid-rows: repeat(4, 2fr); /* 4 "rækker", top/bund er halve */
+  --grid-rows: repeat(4, minmax(0, 2fr)); /* 4 "rækker" – minmax(0, …) så teksten ikke kan strække rækkerne */
   --grid-line: var(--blue);
   --row-h: 10vh;
 
@@ -65,6 +87,21 @@
   --border: 1px solid rgba(0, 0, 0, 0.08);
   --border-radius-small: 0.5rem;
   --border-radius-large: 1rem;
+  --border-radius-card-mobile: 10px; /* projektkort på mobil (Figma) */
+
+  /* Sidemargin – glider fra 18px (390px skærm) til 128px (1440px skærm),
+     så layoutet ikke springer ved 768px */
+  --page-gutter: clamp(18px, calc(10.48vw - 22.9px), 8rem);
+  --page-pad-y: clamp(3rem, calc(7.62vw + 18.3px), 8rem); /* 48px → 128px */
+}
+
+/* Mobil: headerhøjde fra Figma ("Header/mobil") og fælles rækkehøjde */
+@media (max-width: 767px) {
+  :root {
+    --row-h: 72px;
+    /* Rækkehøjde på mobil: skærmen under headeren delt i 5 – bruges af både hero og menu */
+    --row-mobile: calc((100svh - var(--row-h)) / 5);
+  }
 }
 
 /* ----- Blinkende bokse ----- */
@@ -109,6 +146,13 @@
 /* Reset / baseline */
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  /* Intet vandret overflow: bredt indhold må ikke få mobilen til at zoome ud,
+     så den faste hero strækkes. "clip" bryder ikke position: fixed/sticky */
+  overflow-x: clip;
 }
 
 body {
@@ -203,7 +247,7 @@ p {
 /* Generel page styling */
 
 .page {
-  padding: 8rem 8rem;
+  padding: var(--page-pad-y) var(--page-gutter);
 }
 
 /* Generelt sektions title line*/
@@ -218,6 +262,32 @@ p {
   height: 1px;
   background: var(--blue);
   margin-bottom: 2rem;
+}
+
+/* Mobil: bundpadding og sektionstitler som i Figma ("Projekter – iPhone").
+   Ligger her, fordi index.css indlæses efter komponenternes CSS */
+@media (max-width: 767px) {
+  .page {
+    padding-bottom: 4rem;
+  }
+
+  /* Sektionstitel – bruges også på ProjectsPage */
+  .section-title {
+    padding-bottom: 18px;
+    margin-bottom: 1rem;
+  }
+
+  /* Stregen skal ligge helt i bunden (desktop rykker den op med margin) */
+  .section-title::after {
+    margin-bottom: 0;
+  }
+
+  .section-title h1 {
+    margin: 0;
+    font-size: var(--font-mobile-h1);
+    line-height: var(--line-mobile-display);
+    letter-spacing: var(--tracking-mobile-h1);
+  }
 }
 
 /* ----------------------------- */

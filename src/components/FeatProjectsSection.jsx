@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import projects from "../data/projects";
 import FeatProjectsCard from "./FeatProjectsCard";
+import ProjectCard from "./ProjectCard";
+import useMediaQuery from "../hooks/useMediaQuery";
 import useInView from "../hooks/useInView";
 import RevealText from "./RevealText";
 import FadeIn from "./FadeIn";
@@ -9,6 +11,9 @@ import "./FeatProjectsSection.css";
 export default function FeatProjectSection() {
   const featured = projects.slice(0, 3);
   const [buttonRef, isVisible] = useInView();
+  // Mobil: samme kort som på ProjectsPage
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const Card = isMobile ? ProjectCard : FeatProjectsCard;
 
   return (
     <section className="feat-project-section">
@@ -18,7 +23,7 @@ export default function FeatProjectSection() {
 
       <div className="feat-project-grid">
         {featured.map((project, index) => (
-          <FeatProjectsCard key={project.slug} project={project} index={index} />
+          <Card key={project.slug} project={project} index={index} />
         ))}
       </div>
 
@@ -33,7 +38,7 @@ export default function FeatProjectSection() {
           <span className="feat-button-line" aria-hidden="true" />
           <FadeIn as="span" distance={0}>
             <img
-              src={`${import.meta.env.BASE_URL}arrow-long.svg`}
+              src={`${import.meta.env.BASE_URL}${isMobile ? "arrow-short.svg" : "arrow-long.svg"}`}
               alt=""
               className="feat-button-arrow"
             />

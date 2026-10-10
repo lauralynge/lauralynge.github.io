@@ -26,6 +26,12 @@
   text-decoration: none;
 }
 
+/* Ingen margin og trimmet linjeboks, så teksten står i midten af cellen */
+.nav-link h3 {
+  margin: 0;
+  text-box: trim-both cap alphabetic;
+}
+
 /* Den aktive fane - matcher highlighten i Figma */
 .nav-link.active {
   background: var(--green);
@@ -67,4 +73,165 @@
   width: 100%;
   background: transparent;
   z-index: 20;
+}
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* Header: logo | tom | burger – menuen dækker hele skærmen */
+/* ----------------------------- */
+
+.mobile-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: var(--row-h);
+  flex-shrink: 0;
+  background: var(--white);
+}
+
+.mobile-header > * {
+  border-right: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.mobile-header > :last-child {
+  border-right: none;
+}
+
+.mobile-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-header-logo img {
+  width: 44px;
+}
+
+.mobile-header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-top: 0;
+  border-left: 0;
+  cursor: pointer;
+}
+
+.mobile-header-burger {
+  background: var(--light-blue);
+}
+
+.mobile-header-close {
+  background: var(--blue);
+}
+
+/* Menu-overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* menuen kan ikke scrolles */
+  overscroll-behavior: contain;
+  touch-action: none; /* ingen swipe-scroll – tryk virker stadig */
+  background: var(--white);
+}
+
+/* Linkene krymper på lave skærme, så alt altid kan være der uden scroll */
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.mobile-menu-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: var(--row-mobile); /* samme rækkehøjde som forsiden */
+  min-height: 0;
+}
+
+.mobile-menu-row > * {
+  border-bottom: 1px solid var(--blue);
+}
+
+/* Farvet celle til højre: link i kolonne 1–3, celle i kolonne 4 */
+.box-side-right .mobile-menu-link {
+  grid-column: 1 / 4;
+  border-right: 1px solid var(--blue);
+}
+
+.box-side-right .mobile-menu-box {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+/* Farvet celle til venstre: celle i kolonne 1, link i kolonne 2–4 */
+.box-side-left .mobile-menu-box {
+  grid-column: 1;
+  grid-row: 1;
+  border-right: 1px solid var(--blue);
+}
+
+.box-side-left .mobile-menu-link {
+  grid-column: 2 / 5;
+}
+
+.mobile-menu-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 1rem 1.5rem;
+  font-family: var(--font-serif);
+  font-size: var(--font-mobile-menu);
+  font-weight: 400;
+  line-height: var(--line-tight);
+  letter-spacing: var(--tracking-mobile-menu);
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.mobile-menu-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.mobile-menu-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  height: 96px;
+  border-bottom: 1px solid var(--blue);
+  /* Toplinjen tegnes 1px over ikonerne – ligger de lige under Kontakt,
+     lander den oven i rækkens bundlinje, så det bliver én streg */
+  box-shadow: 0 -1px 0 var(--blue);
+}
+
+.mobile-menu-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+}
+
+.mobile-menu-socials img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.mobile-menu-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin: 0;
+  font-size: var(--font-mobile-micro);
+  line-height: var(--line-relaxed);
 }

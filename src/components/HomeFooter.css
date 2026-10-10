@@ -9,13 +9,19 @@
   grid-template-columns: 1.2fr 1fr auto;
   align-items: stretch;
   gap: 2rem;
-  padding: 5rem 8rem;
+  padding: 5rem var(--page-gutter); /* samme flydende sidemargin som resten af siden */
   border-top: 1px solid var(--blue);
 }
 
 .home-footer-text {
   display: flex;
   align-items: center;
+}
+
+/* Overskriften glider fra 40px (390px skærm) til 96px (1440px skærm),
+   så den ikke flyder ud over kolonnen på mellemstore skærme */
+.home-footer-text h1 {
+  font-size: clamp(var(--font-mobile-h1), calc(5.33vw + 19.2px), var(--font-h1));
 }
 
 .home-footer-text h2 {
@@ -35,7 +41,7 @@
   justify-content: center;
   gap: 0.5rem;
   border-left: 1px solid var(--blue);
-  padding-left: 8rem;
+  padding-left: var(--page-gutter);
   margin: -5rem 0; /* modvirker top/bund-padding fra .home-footer-top */
   padding-top: 5rem; /* genskaber den visuelle afstand til ikonerne */
   padding-bottom: 5rem;
@@ -65,4 +71,72 @@
   padding: 0.5rem 0;
   color: var(--blue);
   border-top: 1px solid var(--blue);
+}
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* Tekst, sociale ikoner og © under hinanden – "Footer" i Figma */
+/* ----------------------------- */
+@media (max-width: 767px) {
+  .home-footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .home-footer-text {
+    padding: 2rem var(--page-gutter) 0;
+  }
+
+  .home-footer-text h1 {
+    margin: 0;
+    line-height: var(--line-mobile-display);
+    letter-spacing: var(--tracking-mobile-h1);
+  }
+
+  .home-footer-contact {
+    padding: 1.5rem var(--page-gutter) 2rem;
+    border-bottom: 1px solid var(--blue);
+  }
+
+  .home-footer-contact p {
+    margin: 0 0 18px;
+    font-size: var(--font-mobile-body);
+    line-height: var(--line-mobile-body);
+  }
+
+  .home-footer-contact p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Ikonerne på en vandret række */
+  .home-footer-socials {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: 96px;
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-bottom: 1px solid var(--blue);
+  }
+
+  .home-footer-socials a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .home-footer-socials a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .home-footer-bottom {
+    height: 32px;
+    padding: 0;
+    border-top: none; /* ikonrækken har allerede stregen */
+    font-size: var(--font-mobile-micro);
+    line-height: var(--line-relaxed);
+  }
 }

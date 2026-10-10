@@ -36,6 +36,72 @@
 }
 
 /* tags skal ligge i bunden */
-.project-tags {
+.project-card-bottom {
   margin-top: auto; /* ← skubber tags ned i bunden */
+}
+
+.project-card-arrow {
+  display: none;
+}
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* Samme kort på forsiden og ProjectsPage – "Projekter – iPhone" i Figma */
+/* ----------------------------- */
+@media (max-width: 767px) {
+  .project-card {
+    height: auto;
+    overflow: visible;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--blue);
+  }
+
+  .project-card-image {
+    height: auto;
+    aspect-ratio: 1; /* kvadratisk billede */
+    border-radius: var(--border-radius-card-mobile);
+  }
+
+  .project-card-content {
+    padding: 0;
+  }
+
+  .project-title {
+    margin: 0;
+    font-size: var(--font-mobile-h2);
+    line-height: var(--line-mobile-h2);
+  }
+
+  /* .project-card foran, så den slår den globale .small */
+  .project-card .project-subtitle {
+    margin: 2px 0 0;
+    font-size: var(--font-mobile-p);
+    font-weight: 600;
+    line-height: var(--line-relaxed);
+  }
+
+  .project-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .project-tags {
+    margin: 0;
+    font-size: var(--font-mobile-micro);
+    line-height: var(--line-relaxed);
+  }
+
+  .project-card-arrow {
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-card-arrow {
+    transform: translateX(6px);
+  }
 }

@@ -23,8 +23,20 @@
   }
 }
 
-@media (max-width: 600px) {
+/* Mobil: én kolonne – hvert kort har sin egen streg (ProjectCard.css) */
+@media (max-width: 767px) {
+  .project-grid,
   .project-grid-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-grid-row {
+    padding-bottom: 0;
+  }
+
+  .project-grid-row::after {
+    display: none;
   }
 }

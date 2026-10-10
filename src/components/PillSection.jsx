@@ -19,7 +19,7 @@ export default function PillSection() {
   ];
 
   return (
-    <section className="pill-section">
+    <section className="pill-section" id="kompetencer">
       <div className="page">
         <RevealText as="h3" className="pill-section-title">
           Hard skills

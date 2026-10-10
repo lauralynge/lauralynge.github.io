@@ -25,7 +25,7 @@ const LAYOUTS = {
     developer: [2, 5, 3],
     intro: [6, 8, 3],
   },
-  // Tablet (600–1023px, fx iPad på højkant): bredere titler og introtekst på egen række
+  // Tablet (768–1023px, fx iPad på højkant): bredere titler og introtekst på egen række
   tablet: {
     cols: 8,
     rows: 5,
@@ -41,21 +41,22 @@ const LAYOUTS = {
     developer: [2, 6, 3],
     intro: [4, 8, 4],
   },
-  // Mobil (< 600px, fx iPhone): 6 kolonner, titler over næsten hele bredden
+  // Mobil (< 768px, fx iPhone): 4 lige brede kolonner, titler venstrestillet
+  // og en blå "Se projekter"-knap i nederste række
   mobile: {
-    cols: 6,
+    cols: 4,
     rows: 5,
     boxes: [
-      { color: "orange", col: 5, row: 1 },
-      { color: "green", col: 6, row: 2 },
+      { color: "orange", col: 1, row: 1 },
+      { color: "green", col: 4, row: 2 },
       { color: "grey", col: 1, row: 3 },
-      { color: "burgundy", col: 3, row: 5 },
-      { color: "pink", col: 6, row: 5 },
+      { color: "burgundy", col: 4, row: 4 },
     ],
     digital: [2, 5, 1],
-    designer: [2, 6, 2],
-    developer: [2, 6, 3],
-    intro: [2, 6, 4],
+    designer: [1, 4, 2],
+    developer: [2, 5, 3],
+    intro: [1, 4, 4],
+    cta: [2, 5, 5],
   },
 };
 
@@ -67,7 +68,7 @@ const area = ([colStart, colEnd, row]) => ({
 
 export default function Hero() {
   const location = useLocation();
-  const isMobile = useMediaQuery("(max-width: 599px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const isTablet = useMediaQuery("(max-width: 1023px)");
   const layout = isMobile
     ? LAYOUTS.mobile
@@ -110,6 +111,7 @@ export default function Hero() {
             layout.designer,
             layout.developer,
             layout.intro,
+            ...(layout.cta ? [layout.cta] : []),
           ]}
         />
 
@@ -148,9 +150,26 @@ export default function Hero() {
         <p className="hero-intro" style={area(layout.intro)}>
           Jeg er digital designer og udvikler, og jeg skaber intuitive og enkle
           digitale oplevelser — design, der føles, ikke bare ses.
-          <br />
-          <br />– Laura Lynge Nielsen
+          <span className="hero-signature">
+            <br />
+            <br />– Laura Lynge Nielsen
+          </span>
         </p>
+
+        {layout.cta && (
+          <button
+            type="button"
+            className="hero-cta"
+            style={area(layout.cta)}
+            aria-label="Se projekter"
+            onClick={() =>
+              window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+            }
+          >
+            <span className="hero-cta-name">Laura Lynge Nielsen</span>
+            <img src="/hero-pil.svg" alt="" width="22" height="22" />
+          </button>
+        )}
       </div>
     </section>
   );

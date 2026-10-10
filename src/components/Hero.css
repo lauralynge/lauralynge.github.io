@@ -128,18 +128,70 @@
   }
 }
 
-/* Mobil: iPhone */
-@media (max-width: 599px) {
+/* Mobil: iPhone (< 768px) */
+@media (max-width: 767px) {
   .hero-grid {
-    --grid-cols: 0.5fr repeat(4, 1fr) 0.5fr; /* 6 kolonner, yderst er halve */
-    --font-hero: 14vw;
+    --grid-cols: repeat(4, minmax(0, 1fr)); /* 4 lige brede kolonner */
+    --font-hero: 14.4vw; /* = --font-mobile-display (56px) på en 390px skærm, skalerer med bredden */
+    --grid-rows: repeat(5, var(--row-mobile)); /* samme rækkehøjde som i menuen */
+    height: calc(100svh - var(--row-h)); /* nederste række (knappen) skal være synlig */
+  }
+
+  .hero-title {
+    justify-self: stretch;
+    text-align: left;
+    padding-left: 1rem;
+    margin: 0;
+    line-height: var(--line-mobile-display);
+    letter-spacing: var(--tracking-mobile-display);
+    white-space: nowrap;
+  }
+
+  .hero-title.digital {
+    font-weight: 600;
   }
 
   .hero-intro {
+    justify-self: stretch;
+    align-self: center;
+    max-width: none;
+    margin: 0;
     padding: 1rem;
+    font-size: var(--font-mobile-p);
+    line-height: normal;
   }
 
+  .hero-signature {
+    display: none; /* navnet står i den blå knap i stedet */
+  }
+
+  /* Skråstregen fra "Designer" ned mod "Developer" */
   .has-slash::after {
-    width: 4rem;
+    left: 42.5vw;
+    top: 100%;
+    width: 10.25vw;
+    height: 16.4vw;
+    background: url("/hero-skraastreg.svg") no-repeat center / 100% 100%;
+    transform: scaleX(-1); /* spejlet som i Figma */
+  }
+
+  /* Blå "Se projekter"-knap */
+  .hero-cta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 1rem 1.125rem 0.75rem;
+    border: 0;
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .hero-cta-name {
+    font-family: var(--font-serif);
+    font-size: var(--font-mobile-h3);
+    font-weight: 600;
+    line-height: var(--line-normal);
   }
 }

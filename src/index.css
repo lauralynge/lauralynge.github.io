@@ -17,6 +17,28 @@
   --line-normal: 1.2;
   --line-relaxed: 1.4;
 
+  /* Typography scale – mobil (tekst-styles "Mobil/…" i Figma) */
+  --font-mobile-display: 56px; /* Digital / Designer / Developer */
+  --font-mobile-h1: 40px;
+  --font-mobile-h2: 30px;
+  --font-mobile-h3: 20px;
+  --font-mobile-body: 16px; /* Brødtekst */
+  --font-mobile-p: 14px; /* p + Undertekst */
+  --font-mobile-micro: 12px;
+
+  --line-mobile-display: 1.1; /* Display + H1 */
+  --line-mobile-h2: 1.15;
+  --line-mobile-body: 1.5; /* Brødtekst */
+
+  --tracking-mobile-display: -0.018em; /* -1px ved 56px */
+  --tracking-mobile-h1: -0.0125em; /* -0.5px ved 40px */
+  --font-mobile-menu: 36px; /* Mobil/H1 – menu */
+  --tracking-mobile-menu: -0.014em; /* -0.5px ved 36px */
+
+  /* Fonte */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
   /* Colors */
   --white: #fef9ee;
   --blue: #374dae;
@@ -67,6 +89,15 @@
   --border-radius-large: 1rem;
 }
 
+/* Mobil: headerhøjde fra Figma ("Header/mobil") og fælles rækkehøjde */
+@media (max-width: 767px) {
+  :root {
+    --row-h: 72px;
+    /* Rækkehøjde på mobil: skærmen under headeren delt i 5 – bruges af både hero og menu */
+    --row-mobile: calc((100svh - var(--row-h)) / 5);
+  }
+}
+
 /* ----- Blinkende bokse ----- */
 .cell-box {
   width: 100%;
@@ -109,6 +140,13 @@
 /* Reset / baseline */
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  /* Intet vandret overflow: bredt indhold må ikke få mobilen til at zoome ud,
+     så den faste hero strækkes. "clip" bryder ikke position: fixed/sticky */
+  overflow-x: clip;
 }
 
 body {

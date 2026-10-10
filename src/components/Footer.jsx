@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-links">
         <a
-          href="https://github.com/dit-brugernavn"
+          href="https://github.com/lauralynge"
           target="_blank"
           rel="noreferrer"
         >
@@ -15,7 +15,7 @@ export default function Footer() {
           <h3>Email</h3>
         </a>
         <a
-          href="https://linkedin.com/in/dit-brugernavn"
+          href="https://linkedin.com/in/lauralyngenielsen"
           target="_blank"
           rel="noreferrer"
         >

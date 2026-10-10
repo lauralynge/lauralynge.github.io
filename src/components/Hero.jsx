@@ -31,7 +31,7 @@ const LAYOUTS = {
     rows: 5,
     boxes: [
       { color: "orange", col: 2, row: 1 },
-      { color: "green", col: 2, row: 2 },
+      { color: "green", col: 8, row: 2 }, // lige til højre for "Designer"
       { color: "grey", col: 1, row: 3 },
       { color: "burgundy", col: 3, row: 5 },
       { color: "pink", col: 8, row: 5 },

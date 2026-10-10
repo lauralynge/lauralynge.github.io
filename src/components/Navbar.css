@@ -26,6 +26,12 @@
   text-decoration: none;
 }
 
+/* Ingen margin og trimmet linjeboks, så teksten står i midten af cellen */
+.nav-link h3 {
+  margin: 0;
+  text-box: trim-both cap alphabetic;
+}
+
 /* Den aktive fane - matcher highlighten i Figma */
 .nav-link.active {
   background: var(--green);

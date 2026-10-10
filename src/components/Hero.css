@@ -20,6 +20,7 @@
   grid-template-rows: var(--grid-rows);
   height: 100vh;
   height: 100svh;
+  --hero-row-h: calc(100svh / 4); /* én rækkes højde – bruges til skråstregen */
 }
 
 .hero-grid > *:not(.grid-lines) {
@@ -92,15 +93,39 @@
   position: relative;
 }
 
+/* Skråstregen mellem "Designer" og "Developer".
+   Titlerne er centreret i hver deres række, så midten af mellemrummet
+   ligger præcis på gitterlinjen: en halv række under midten af "Designer".
+   (50% = midten af titlens boks, uanset om linjeboksen er trimmet) */
 .has-slash::after {
   content: "";
   position: absolute;
   left: -10%;      /* hvor langt ud til højre */
-  top: 160%;          /* vertikal placering */
-  width: 8rem;       /* længden på stregen */
-  height: 2px;       /* tykkelsen */
+  top: calc(50% + var(--hero-row-h) / 2); /* stregens midte = lige imellem titlerne */
+  width: 1em;      /* længden følger skriftstørrelsen, så den passer i mellemrummet */
+  height: 2px;     /* tykkelsen */
   background: var(--blue);
   transform: translateY(-50%) rotate(-230deg); /* skrå vinkel */
+}
+
+/* ----------------------------- */
+/* VERTIKAL CENTRERING AF TEKST  */
+/* ----------------------------- */
+
+/* Ingen margin – ellers skubbes teksten op i cellen */
+.hero-title,
+.hero-intro {
+  margin: 0;
+}
+
+/* text-box trimmer linjeboksen fra toppen af de store bogstaver til
+   grundlinjen, så teksten står visuelt i midten af cellen – uanset
+   line-height og fontens indbyggede luft over/under bogstaverne */
+@supports (text-box: trim-both cap alphabetic) {
+  .hero-title,
+  .hero-intro {
+    text-box: trim-both cap alphabetic;
+  }
 }
 
 /* ----------------------------- */
@@ -119,6 +144,7 @@
 @media (max-width: 1023px) {
   .hero-grid {
     --grid-rows: repeat(5, minmax(0, 1fr));
+    --hero-row-h: calc(100svh / 5);
     --font-hero: clamp(4rem, 11vw, 7rem);
   }
 
@@ -134,6 +160,7 @@
     --grid-cols: repeat(4, minmax(0, 1fr)); /* 4 lige brede kolonner */
     --font-hero: 14.4vw; /* = --font-mobile-display (56px) på en 390px skærm, skalerer med bredden */
     --grid-rows: repeat(5, var(--row-mobile)); /* samme rækkehøjde som i menuen */
+    --hero-row-h: var(--row-mobile);
     height: calc(100svh - var(--row-h)); /* nederste række (knappen) skal være synlig */
   }
 
@@ -168,7 +195,7 @@
   /* Skråstregen fra "Designer" ned mod "Developer" */
   .has-slash::after {
     left: 42.5vw;
-    top: 100%;
+    top: calc(50% + var(--hero-row-h) / 2 - 8.2vw); /* midten lige imellem titlerne */
     width: 10.25vw;
     height: 16.4vw;
     background: url("/hero-skraastreg.svg") no-repeat center / 100% 100%;

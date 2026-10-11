@@ -1,0 +1,87 @@
+.about-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Det brede felt er dobbelt så bredt som det smalle (Figma: 788 + 396px) */
+.about-gallery-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-gallery-row:has(.about-tile:first-child:not(.is-wide)) {
+  grid-template-columns: 1fr 2fr;
+}
+
+.about-gallery-row-1 {
+  height: clamp(240px, calc(19.05vw + 165.7px), 440px); /* 240 → 440px */
+}
+
+.about-gallery-row-2 {
+  height: clamp(220px, calc(15.24vw + 160.6px), 380px); /* 220 → 380px */
+}
+
+/* Billede med blå tone og titel nederst til venstre */
+.about-tile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 24px 28px;
+  border-radius: var(--border-radius-large);
+  background: var(--light-blue); /* bag felter uden billede (Interrail) */
+}
+
+.about-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(55, 77, 174, 0.5); /* --blue med 50% */
+}
+
+.about-tile-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-h2-fluid);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--white);
+}
+
+/* Mobil: Le Mans i fuld bredde, Caminoen og Camping side om side,
+   Interrail i fuld bredde (samme højde som Le Mans). Rækkerne opløses, så felterne lægger sig i ét
+   grid i den rækkefølge, de står i koden */
+@media (max-width: 767px) {
+  .about-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .about-gallery-row,
+  .about-gallery-row:has(.about-tile:first-child:not(.is-wide)) {
+    display: contents;
+  }
+
+  .about-tile {
+    aspect-ratio: 2 / 3; /* Caminoen og Camping: høje */
+    padding: 0 0 16px 18px;
+  }
+
+  /* Le Mans og Interrail: fuld bredde og samme højde */
+  .about-tile.is-wide {
+    grid-column: 1 / -1;
+    aspect-ratio: 2.4 / 1;
+  }
+}

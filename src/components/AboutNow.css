@@ -1,0 +1,38 @@
+.about-now {
+  margin: 0;
+  border-top: 1px solid var(--blue);
+}
+
+/* Samme kolonner som kontaktrækkerne: label-kolonne + værdi */
+.about-now-row {
+  display: grid;
+  grid-template-columns: var(--label-col) 1fr; /* værdien flugter med navigationens linje */
+  align-items: baseline;
+  padding: clamp(14px, calc(1.71vw + 7.3px), 32px) 0; /* 14 → 32px */
+  border-bottom: 1px solid var(--blue);
+}
+
+.about-now-label {
+  font-size: var(--font-mobile-micro);
+  color: var(--burgundy);
+}
+
+.about-now-value {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(22px, calc(1.333vw + 16.8px), 36px); /* 22 → 36px */
+  line-height: 1.15;
+  color: var(--blue);
+}
+
+/* Mobil: label over værdien */
+@media (max-width: 767px) {
+  .about-now-row {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .about-now-label {
+    letter-spacing: 0.06em;
+  }
+}

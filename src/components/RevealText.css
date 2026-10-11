@@ -2,6 +2,12 @@
   display: inline-block;
 }
 
+/* Et ord holdes samlet på én linje */
+.reveal-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .reveal-letter {
   display: inline-block;
   overflow: hidden;

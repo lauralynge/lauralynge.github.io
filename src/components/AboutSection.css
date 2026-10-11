@@ -1,0 +1,41 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, calc(3.05vw + 20.1px), 64px); /* 32 → 64px */
+  padding-top: clamp(32px, calc(3.05vw + 20.1px), 64px);
+  border-top: 1px solid var(--blue);
+}
+
+/* Overskrift og tekst i to lige brede kolonner uden mellemrum, så teksten
+   starter præcis midt på skærmen – på linje med navigationens streg
+   til venstre for "Projekter" */
+.about-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.about-section-title {
+  margin: 0;
+  padding-right: 2rem; /* luften mellem kolonnerne ligger her i stedet for som gap */
+  font-family: var(--font-serif);
+  font-size: var(--font-h2-fluid);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.about-section-aside p {
+  margin: 0;
+}
+
+/* Mobil: overskrift over teksten */
+@media (max-width: 767px) {
+  .about-section-head {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-section-title {
+    padding-right: 0;
+  }
+}

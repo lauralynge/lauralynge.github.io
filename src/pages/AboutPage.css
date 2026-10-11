@@ -1,0 +1,16 @@
+/* Om mig: sektionerne under hinanden med samme sidemargin som resten af siden */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, calc(2.29vw + 31.1px), 64px); /* 40 → 64px */
+  padding: 0 var(--page-gutter) clamp(64px, calc(6.1vw + 40.2px), 128px);
+}
+
+/* "Lidt mere om mig": 18px brødtekst med luftig linjehøjde */
+.about-page-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.65em;
+  font-size: clamp(16px, calc(0.19vw + 15.26px), 18px);
+  line-height: 1.65;
+}

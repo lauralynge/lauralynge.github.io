@@ -13,7 +13,7 @@ export default function HomeFooter() {
         </div>
 
         <div className="home-footer-contact">
-          <p>Jeg søger praktikplads i perioden d. 4/1 til d. 30/3.</p>
+          <p>Jeg søger praktikplads fra 4. januar til 12. marts.</p>
           <p>
             I kan altid fange mig på mail:
             <br />

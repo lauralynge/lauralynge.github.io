@@ -17,9 +17,16 @@
  margin-bottom: 2rem;
 }
 
-@media (max-width: 900px) {
+/* Breakpoints skal matche "isNarrow" og "isSingle" i ProjectGrid.jsx */
+@media (max-width: 1279px) {
   .project-grid-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 999px) {
+  .project-grid-row {
+    grid-template-columns: 1fr;
   }
 }
 

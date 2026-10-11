@@ -1,8 +1,14 @@
 import ProjectCard from "./ProjectCard";
+import useMediaQuery from "../hooks/useMediaQuery";
 import "./ProjectGrid.css";
 
 export default function ProjectGrid({ projects }) {
-  const columns = 3;
+  // 2 kolonner under 1280px og 1 under 1000px, så kortene ikke bliver for smalle.
+  // Rækkerne skal have lige så mange projekter som der er kolonner,
+  // ellers står det sidste projekt alene på sin egen linje
+  const isNarrow = useMediaQuery("(max-width: 1279px)");
+  const isSingle = useMediaQuery("(max-width: 999px)");
+  const columns = isSingle ? 1 : isNarrow ? 2 : 3;
   const rows = Math.ceil(projects.length / columns);
 
   return (

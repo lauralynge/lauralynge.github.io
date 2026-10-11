@@ -1,0 +1,149 @@
+/* ----------------------------- */
+/* KONTAKTSIDE                   */
+/* "Kontakt – ny – desktop" og "Kontakt – ny – iPhone" i Figma.
+   Størrelserne glider fra mobil (390px skærm) til desktop (1440px skærm) */
+/* ----------------------------- */
+
+.contact-page {
+  padding: 0 var(--page-gutter) clamp(0px, calc(12.19vw - 47.5px), 128px);
+}
+
+/* ----- Overskrift + invitation ----- */
+
+.contact-heading {
+  display: flex;
+  flex-wrap: wrap; /* invitationen lægger sig under overskriften, når der ikke er plads */
+  align-items: flex-end;
+  justify-content: space-between;
+  column-gap: 2rem;
+  row-gap: 20px;
+  padding-top: clamp(48px, calc(6.857vw + 21.26px), 120px); /* 48 → 120px */
+  padding-bottom: clamp(28px, calc(3.43vw + 14.6px), 64px); /* 28 → 64px */
+}
+
+.contact-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(56px, calc(6.857vw + 29.26px), 128px); /* 56 → 128px */
+  font-weight: 400;
+  line-height: 1;
+  color: var(--blue);
+}
+
+/* Hver linje er en blok, så "Lad os tale" og "sammen" altid står på hver sin linje */
+.contact-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.contact-title-italic {
+  font-style: italic;
+}
+
+/* Venstre kant flugter med navigationens linje til venstre for "Om mig".
+   Navigationen er delt i 0.5 + 6 + 0.5 kolonner (7 i alt), så linjen ligger
+   4,5/7 inde på skærmen. Omregnet til indholdets bredde (100%) og
+   sidemargenen bliver tekstens bredde: 2,5/7 × 100% − 2/7 × margen */
+.contact-invitation {
+  flex: 0 0 auto;
+  width: calc(100% * 2.5 / 7 - var(--page-gutter) * 2 / 7);
+  margin: 0 0 0 auto; /* holdes til højre – også når den ligger under overskriften */
+  padding-bottom: 10px;
+  font-size: var(--font-body);
+  line-height: 1.25;
+}
+
+/* ----- Kontaktrækker ----- */
+
+.contact-rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--blue);
+}
+
+/* Desktop: label | værdi | pil på én linje */
+.contact-row {
+  display: grid;
+  grid-template-columns: clamp(120px, calc(11.9vw + 28.6px), 200px) 1fr auto; /* label-kolonne: 120 → 200px */
+  grid-template-areas: "label value arrow";
+  align-items: center;
+  min-height: clamp(76px, calc(1.905vw + 68.57px), 96px); /* 76 → 96px */
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.contact-label {
+  grid-area: label;
+  font-size: var(--font-mobile-micro);
+  color: var(--burgundy);
+}
+
+.contact-value {
+  grid-area: value;
+  font-family: var(--font-serif);
+  font-size: clamp(22px, calc(1.333vw + 16.8px), 36px); /* 22 → 36px */
+  line-height: 1.15;
+  transition: transform 0.3s ease;
+}
+
+.contact-arrow {
+  grid-area: arrow;
+  width: clamp(20px, calc(0.38vw + 18.5px), 24px); /* 20 → 24px */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover: tekst og pil rykker sammen skråt op mod højre */
+a.contact-row:hover .contact-value,
+a.contact-row:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* ----------------------------- */
+/* MOBIL (< 768px)               */
+/* Labelen står over værdien, og footeren skubbes ned i bunden */
+/* ----------------------------- */
+@media (max-width: 767px) {
+  .contact-page {
+    /* fyld skærmen under headeren, så footeren ligger i bunden (Figma: "Spacer") */
+    min-height: calc(100svh - var(--row-h) - 98px); /* footerens højde inkl. streger */
+  }
+
+  .contact-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-title {
+    line-height: var(--line-mobile-display);
+    letter-spacing: var(--tracking-mobile-display);
+  }
+
+  .contact-invitation {
+    flex: none;
+    width: auto;
+    margin-left: 0;
+    padding-bottom: 0;
+    line-height: var(--line-mobile-body);
+  }
+
+  /* Labelen over værdien, pilen til højre */
+  .contact-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "label arrow"
+      "value arrow";
+    row-gap: 4px;
+    padding: 14px 0;
+  }
+
+  .contact-label {
+    letter-spacing: 0.06em; /* 0.72px ved 12px */
+  }
+
+  .contact-value {
+    line-height: var(--line-normal);
+  }
+}

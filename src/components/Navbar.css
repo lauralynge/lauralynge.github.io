@@ -47,32 +47,32 @@
   text-decoration: none;
 }
 
-/* Sticky navbar der dukker op når man scroller ned */
-/*.navbar-fixed {
-  position: fixed;
+/* Fast header på undersiderne: bliver i toppen og glider op ud af
+   skærmen, når man scroller ned – og frem igen ved scroll op */
+.site-header-sticky {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
+  z-index: 100;
   background: var(--white);
-  z-index: 50;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}*/
-
-/* Skjult når man er i heroen */
-.navbar-hidden {
-  opacity: 0;
-  pointer-events: none;
+  transition: transform 0.3s ease;
 }
 
-/* Navbar */
-.navbar-overlay {
-  position: absolute;
-  top: 0;
+/* Forsiden: fast i stedet for sticky, så den ikke fylder i layoutet
+   og ligger over både heroen og indholdet, der glider over den */
+.site-header-fixed {
+  position: fixed;
   left: 0;
   width: 100%;
-  background: transparent;
-  z-index: 20;
+}
+
+.site-header-sticky.is-hidden {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header-sticky {
+    transition: none;
+  }
 }
 
 /* ----------------------------- */

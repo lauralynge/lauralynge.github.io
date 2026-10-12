@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import NavbarGridLines from "./NavbarGridLines";
 import useMediaQuery from "../hooks/useMediaQuery";
+import useHideOnScroll from "../hooks/useHideOnScroll";
 import "./Navbar.css";
 
 // Menupunkter i mobilmenuen – farvet celle til venstre eller højre som i Figma
@@ -12,6 +13,10 @@ const MOBILE_LINKS = [
   { label: "Kompetencer", to: "/#kompetencer", box: "grey", boxSide: "right" },
   { label: "Kontakt", to: "/contact", box: "burgundy", boxSide: "left" },
 ];
+
+// Forsidens hero er én skærmhøjde – den faste header holdes skjult, så længe
+// heroens egen header kan ses
+const heroHeight = () => window.innerHeight;
 
 const SOCIALS = [
   { label: "Instagram", href: "https://instagram.com", icon: "/insta-ikon.svg" },
@@ -106,11 +111,25 @@ function MobileMenu({ onClose }) {
   );
 }
 
-export default function Navbar({ className = "" }) {
+export default function Navbar({
+  className = "",
+  sticky = false,
+  overHero = false,
+}) {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
   const isMobile = useMediaQuery("(max-width: 767px)");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Fast header i toppen, der glider væk ved scroll ned og frem ved scroll op
+  // overHero: på forsiden ligger headeren fast over heroen og indholdet
+  const hidden = useHideOnScroll({
+    enabled: sticky && !menuOpen,
+    hideAbove: overHero ? heroHeight : undefined,
+  });
+  const stickyClass = sticky
+    ? `site-header-sticky${overHero ? " site-header-fixed" : ""}${hidden ? " is-hidden" : ""}`
+    : "";
 
   // Luk menuen ved sideskift, og hvis vi skifter til desktop-bredde
   useEffect(() => {
@@ -134,7 +153,9 @@ export default function Navbar({ className = "" }) {
   // Mobil (< 768px): logo, tom celle og burger-knap
   if (isMobile) {
     return (
-      <header className={`site-header mobile-header ${className}`}>
+      <header
+        className={`site-header mobile-header ${stickyClass} ${className}`}
+      >
         <NavLink className="mobile-header-logo" to="/">
           <img src="/logo.svg" alt="Logo" />
         </NavLink>
@@ -161,7 +182,7 @@ export default function Navbar({ className = "" }) {
   }
 
   return (
-    <header className={`site-header ${className}`}>
+    <header className={`site-header ${stickyClass} ${className}`}>
       <NavbarGridLines cols={8} rows={1} />
       {isHome && (
         <div

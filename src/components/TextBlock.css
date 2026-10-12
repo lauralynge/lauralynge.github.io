@@ -7,3 +7,15 @@
 .text-block h3 {
   margin-bottom: 1rem;
 }
+
+/* Mobil: teksten fylder hele bredden */
+@media (max-width: 767px) {
+  .text-block {
+    max-width: none;
+    margin: 2rem 0;
+  }
+
+  .text-block p {
+    line-height: var(--line-mobile-body);
+  }
+}

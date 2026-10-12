@@ -71,7 +71,7 @@ function ProjectPage() {
       <section className="project-details">
         <div className="team-list">
           <p className="small">Team</p>
-          <ul className="tag-list">
+          <ul className="team-members">
             {project.team.map((member) => (
               <li key={member}>{member}</li>
             ))}
@@ -79,15 +79,24 @@ function ProjectPage() {
         </div>
 
         <div className="actions">
+          {/* Overskriften vises kun på mobil */}
+          <p className="small links-title">Links</p>
           {project.links.map((link) => (
             <a
-              className="button secondary"
+              className="button secondary link-item"
               href={link.href}
               key={link.href}
               rel="noreferrer"
               target="_blank"
             >
               {link.label}
+              <img
+                className="link-arrow"
+                src={`${import.meta.env.BASE_URL}link-ikon.svg`}
+                alt=""
+                width="24"
+                height="24"
+              />
             </a>
           ))}
         </div>

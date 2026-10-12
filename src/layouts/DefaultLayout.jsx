@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 export default function DefaultLayout({ children }) {
   return (
     <>
-      <Navbar />
+      <Navbar sticky />
       {children}
       <Footer />
     </>

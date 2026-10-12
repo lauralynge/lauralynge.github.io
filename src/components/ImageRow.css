@@ -28,3 +28,19 @@
   object-fit: cover;
   border-radius: var(--border-radius-large);
 }
+
+/* Mobil: tre billeder stables, fire bliver til 2 × 2 */
+@media (max-width: 767px) {
+  .image-row img,
+  .image-row video {
+    border-radius: var(--border-radius-card-mobile);
+  }
+
+  .image-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .image-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

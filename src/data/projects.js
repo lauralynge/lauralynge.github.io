@@ -166,6 +166,151 @@ const projects = [
       },
     ],
   },
+  {
+    slug: "again-by-la-rouge",
+    title: "AGAIN By LA ROUGE",
+    subtitle: "Et Seconhand subbrand til LA RŌUGE",
+    eyebrow: "Branding & re-commerce",
+    summary: "Et Seconhand subbrand til LA RŌUGE",
+    description:
+      "Secondhand-markedet vokser fortsat, og flere forbrugere ser værdien i at købe kvalitetsprodukter til en lavere pris. Selvom LA RŌUGE allerede tilbyder secondhand, er funktionen endnu ikke blevet en naturlig del af kundeoplevelsen. Mange vælger i stedet Vinted, når de vil sælge deres tøj, og nye besøgende bliver sjældent længe nok til at engagere sig. Gennem vores analyse identificerede vi tre centrale udfordringer: manglende kendskab til platformen, begrænset tryghed i købs- og salgsprocessen og en brugerrejse, der ikke er tilstrækkelig enkel. Vores løsning blev et subbrand, der giver LA RŌUGEs re-commerce sit eget navn, sin egen stemme og en digital brugerrejse, som gør det lige så nemt at sælge sit gamle LA RŌUGE-tøj, som det er at finde sit næste. Jeg havde særligt fokus på brandidentiteten, men var også med i udviklingen af både prototypen og branddecket.",
+    tags: ["Branding", "Koncept", "UX"],
+    mainImage: `${import.meta.env.BASE_URL}images/again/again-thumbnail.png`,
+    gridImage: `${import.meta.env.BASE_URL}images/again/again-grid-thumbnail.png`,
+    content: [
+      {
+        type: "images",
+        images: ["/images/again/again-hero.png"],
+      },
+      {
+        type: "text",
+        heading: "Secondhand lever i skyggen af hovedbrandet",
+        body: "LA RŌUGE tilbyder allerede secondhand, men det er en funktion, ikke et univers. Vores analyse bygger på LA RŌUGEs egne salgsdata og kundeprofil, og tallene viser tydeligt problemet: kunderne vil gerne sælge, men vælger Vinted, og de besøgende, der finder vej, bliver ikke hængende. Vi pegede på tre centrale udfordringer: manglende kendskab, begrænset tryghed og en utilstrækkelig brugerrejse.",
+      },
+      {
+        type: "images",
+        images: ["/images/again/again-pre.png"],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/again/data-1.png",
+          "/images/again/data-2.png",
+          "/images/again/data-3.png",
+        ],
+      },
+      {
+        type: "text",
+        heading: "To kunder, to behov",
+        body: "LA RŌUGEs data viste, at kernekunden er omkring 47 år. Hun er sjældent secondhand-køber, men har garderoben fuld af LA RŌUGE – hun er derfor vigtigst som sælger. Samtidig viste tallene fra LA RŌUGE, at 47 % af de 18–49-årige køber secondhand online, mod under 20 % af de 50–79-årige. Det pegede på en ny målgruppe. Den yngre kunde køber ikke nødvendigvis brugt for bæredygtighedens skyld, men for at få adgang til et brand, hun ellers ikke ville betale fuld pris for. Derfor designede vi til to roller frem for én.",
+      },
+      {
+        type: "images",
+        images: [
+          "/images/again/kunde-1.png",
+          "/images/again/kunde-2.png",
+          "/images/again/data-secondhand.png",
+        ],
+      },
+      {
+        type: "images",
+        images: ["/images/again/again-cyklus.png"],
+      },
+      {
+        type: "text",
+        heading: "Fra funktion til univers",
+        body: "LA RŌUGEs secondhand-tilbud fungerede som en enkeltstående funktion frem for et samlet univers. For at give re-commerce en tydeligere plads i kundeoplevelsen udviklede vi AGAIN, et subbrand med eget navn, egen identitet og egen stemme. Målet var at gøre det lige så attraktivt at sælge sit gamle LA RŌUGE-tøj, som det er at finde sit næste. For LA RŌUGE kan AGAIN blive indgangen for en yngre kunde, der senere køber nyt – og holde salget af brugt LA RŌUGE-tøj inden for brandets egne rammer i stedet for på Vinted.",
+      },
+      {
+        type: "images",
+        images: [
+          "/images/again/secondhand-pre-mobil.png",
+          "/images/again/again-forside-mobil.png",
+        ],
+      },
+      {
+        type: "images",
+        images: ["/images/again/again-logo-bordeaux.png"],
+      },
+      {
+        type: "text",
+        heading: "Et nyt brand med samme DNA",
+        body: "AGAIN skulle stå på egne ben, men stadig føles som LA RŌUGE. Vi valgte derfor en Branded House-struktur, hvor AGAIN supplerer hovedbrandet i stedet for at konkurrere med det. Vi fravalgte et helt selvstændigt brand, fordi “By LA RŌUGE” netop er den tillid, der adskiller AGAIN fra Vinted. Bordeauxen og den feminine serif er arvet fra moderbrandet, mens terracottaen og den mere uformelle tone er nye. Logoet samler det i to lag: bordeaux som LA RŌUGEs fundament og terracotta som tøjets nye kapitel. For et subbrand handler det nemlig ikke kun om at skille sig ud – det skal også låne nok af moderbrandet til at føles trygt.",
+      },
+      {
+        type: "images",
+        images: ["/images/again/logo-lag.png"],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/again/logo-1.png",
+          "/images/again/logo-2.png",
+          "/images/again/logo-3.png",
+          "/images/again/logo-4.png",
+        ],
+      },
+      {
+        type: "images",
+        images: ["/images/again/moodboard.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/again/farver.png"],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/again/kvinde-cardigan.png",
+          "/images/again/citat-bordeaux.png",
+        ],
+      },
+      {
+        type: "images",
+        images: ["/images/again/font-1.png", "/images/again/font-2.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/again/citat-beige.png"],
+      },
+      {
+        type: "text",
+        heading: "Brandet omsat til to brugerrejser",
+        body: "For at skabe en mere enkel og tryg oplevelse udviklede vi både køber- og sælgerflows. Fokus var at reducere friktion, skabe gennemsigtighed omkring produkternes stand og gøre det let at give tøjet et nyt liv. Løsningen er endnu ikke testet med brugere, så næste skridt ville være at teste begge rejser med kunder fra hver målgruppe – især om standvurderingen og de 30 % i gavekort er nok til at flytte salget væk fra Vinted.",
+      },
+      {
+        type: "images",
+        images: ["/images/again/køber-flow.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/again/card-highlights.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/again/sælger-flow.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/again/ekstra-1.png", "/images/again/ekstra-2.png"],
+      },
+    ],
+    team: [
+      "Cecilie Vestergaard Andersen",
+      "Mia Poder Olesen",
+      "Laura Lynge Nielsen",
+    ],
+    links: [
+      {
+        label: "Figma Prototype",
+        href: "https://www.figma.com/proto/wqYvK3pZT2mVYvJZEfyBfD/La-Rouge---Case-3?node-id=508-2148&viewport=4756%2C-2403%2C0.23&t=vtCvpimaEKqMhtXG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=508%3A2148&show-proto-sidebar=1&page-id=200%3A766",
+      },
+      {
+        label: "Branddeck",
+        href: `${import.meta.env.BASE_URL}pdf/AgainByLaRouge-branddeck.pdf`,
+      },
+    ],
+  },
 
   {
     slug: "akvarie",
@@ -209,8 +354,7 @@ const projects = [
   {
     slug: "mellemrum",
     title: "Mellemrum",
-    subtitle:
-      "En lokal kultur- og eventplatform.",
+    subtitle: "En lokal kultur- og eventplatform.",
     eyebrow: "Product Optimization",
     summary:
       "En lokal kultur- og eventplatform for koncerter, talks, workshops og fællesskaber i Aarhus.",
@@ -332,25 +476,6 @@ const projects = [
         href: "https://lauralynge.github.io/mellemrum-case-1//",
       },
     ],
-  },
-  {
-    slug: "case-3",
-    title: "Case 3",
-    subtitle: "Case (3)",
-    eyebrow: "Product Optimization",
-    summary: "Kort beskrivelse her",
-    description: "Beskrivelsen af projektet her.",
-    tags: ["Frontend", "React", "Database"],
-    mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    content: [
-      {
-        type: "images",
-        images: ["/images/coming-soon-big.svg"],
-      },
-    ],
-    team: ["Laura Lynge Nielsen"],
-    links: [],
   },
 ];
 export default projects;

@@ -35,6 +35,11 @@
   max-width: 70ch;
 }
 
+/* Luft mellem afsnit, når description er delt op */
+.section.intro .lead + .lead {
+  margin-top: 1em;
+}
+
 /* --- BACK LINK --- */
 .back-link {
   display: inline-block;

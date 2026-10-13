@@ -209,15 +209,94 @@ const projects = [
   {
     slug: "mellemrum",
     title: "Mellemrum",
-    subtitle: "Optimeringscase (1)",
+    subtitle:
+      "En lokal kultur- og eventplatform.",
     eyebrow: "Product Optimization",
     summary:
       "En lokal kultur- og eventplatform for koncerter, talks, workshops og fællesskaber i Aarhus.",
-    description: "Beskrivelsen af projektet her.",
-    tags: ["Frontend", "React", "Database"],
+    description: [
+      "Mellemrum er en kulturplatform for Aarhus, hvor brugere finder og tilmelder sig lokale arrangementer, og arrangører opretter events og holder styr på tilmeldinger. Udgangspunktet var en eksisterende løsning med duplikeret kode, manglende fejlhåndtering og en datamodel, der ikke kunne vokse. Samtidig kunne brugere ikke tilmelde sig, så arrangører havde intet at holde styr på.",
+      "Jeg videreudviklede platformen med en normaliseret datamodel, et tilmeldingsflow, der gemmer i databasen, afviser dubletter og viser ledige pladser, og et redesignet overblik, hvor arrangører kan søge og gruppere tilmeldinger. Resultatet er en platform, hvor brugere kan se med det samme, om der er plads, og arrangører kan finde deres gæster uden at lede.",
+      "Forbedringerne i kode og database er eget arbejde.",
+    ],
+    tags: ["Webudvikling", "Databasedesign ", "UX", "Frontend-arkitektur"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
+    gridImage: `${import.meta.env.BASE_URL}images/mellemrum/mellemrum-grid-thumbnail.png`,
+    content: [
+      {
+        type: "images",
+        images: ["/images/mellemrum/mellemrum-hero.png"],
+      },
+      {
+        type: "text",
+        heading: "Fra fælles audit til egne prioriteringer",
+        body: "Casen startede med en fælles teknisk audit ved studiebordet. Det var fra start tydeligt, at tilmeldingsformularen slet ikke virkede, så tilmeldinger hverken blev gemt eller koblet til events – derfor blev det det vigtigste punkt. Ud af 30 fund udvalgte jeg dem med størst betydning for brugere og videre udvikling, og skemaet viser min prioritering: først struktur og data, derefter det, brugerne mærker.",
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/smiley.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/mellemrum-audit.png"],
+      },
+      {
+        type: "text",
+        heading: "Struktur, der kan vokse",
+        body: "Den eksisterende løsning bestod af få store sidefiler, én lang styles.css og Supabase-kald skrevet direkte på hver side. Jeg delte siderne op i genbrugelige komponenter med egne CSS Modules, samlede farver og typografi i globale variabler og flyttede datahentningen til services med fælles fejl- og loadingbeskeder. I databasen normaliserede jeg data, så tilmeldinger peger på et event, og venues har deres egen tabel. Forløbet viste, hvor meget datamodellen bestemmer – da den først var på plads, blev frontenden markant enklere. For den, der skal bygge videre, betyder det, at en ændring kun skal laves ét sted.",
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/mellemrum-komponenter.png"],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/mellemrum/komponentstruktur-1.png",
+          "/images/mellemrum/komponentstruktur-2.png",
+        ],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/mellemrum/datastruktur-1.png",
+          "/images/mellemrum/datastruktur-2.png",
+        ],
+      },
+      {
+        type: "text",
+        heading: "Et flow, brugeren kan mærke",
+        body: "Med kapacitet på hvert event kan brugeren se, hvor mange pladser der er tilbage, allerede på eventkortet. Tilmeldingen gemmes nu i databasen, og skrives e-mailen forkert, får brugeren besked, før formularen sendes. En bekræftelse erstatter formularen, og er man allerede tilmeldt, får man besked i stedet for at oprette en dublet. Det giver brugeren tryghed om sin plads – og arrangøren et deltagertal, der er til at stole på. Kapacitetstjekket sker i browseren, hvilket jeg bevidst valgte inden for tidsrammen. Det kan i sjældne tilfælde give overbooking, så næste skridt er at flytte tjekket til databasen.",
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/event-cards.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/detail-page.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/tilmeldingsflows.png"],
+      },
+      {
+        type: "text",
+        heading: "Overblik for arrangøren",
+        body: "Arrangørens tilmeldinger lå i én lang tabel. Nu er de grupperet pr. event, og arrangøren kan søge efter navn eller event og hurtigt se, hvem der kommer. Samtidig rettede jeg aria-labels, alt-tekster og sidens sprog, så skærmlæsere læser indholdet korrekt. Situationer som manglende data og events, der ikke findes, er testet ved at simulere dem, så siden altid giver brugeren en vej videre. Værdien bygger dermed på testede flows – det naturlige næste skridt ville være at teste løsningen med rigtige arrangører.",
+      },
+      {
+        type: "images",
+        images: ["/images/mellemrum/tilmeldingsoverblik.png"],
+      },
+      {
+        type: "images",
+        images: [
+          "/images/mellemrum/loading-events.png",
+          "/images/mellemrum/not-found-message.png",
+        ],
+      },
+    ],
     team: ["Laura Lynge Nielsen"],
     links: [
       {

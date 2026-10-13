@@ -33,7 +33,12 @@ function ProjectPage() {
         <div className="col-left">
           <p className="eyebrow">{project.eyebrow}</p>
           <h1>{project.title}</h1>
-          <p className="lead">{project.description}</p>
+          {/* description kan være én streng eller et array af afsnit */}
+          {[project.description].flat().map((paragraph, i) => (
+            <p key={i} className="lead">
+              {paragraph}
+            </p>
+          ))}
         </div>
 
         <div className="col-right">

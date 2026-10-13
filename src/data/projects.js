@@ -213,11 +213,17 @@ const projects = [
     eyebrow: "Product Optimization",
     summary:
       "En lokal kultur- og eventplatform for koncerter, talks, workshops og fællesskaber i Aarhus.",
-    description: "Beskrivelsen af projektet her.",
+    description:
+      "Mellemrum er en kulturplatform for Aarhus, hvor brugere finder og tilmelder sig lokale arrangementer, og arrangører opretter events og holder styr på tilmeldinger. Udgangspunktet var en eksisterende løsning med duplikeret kode, manglende fejlhåndtering og en datamodel, der ikke kunne vokse. Samtidig kunne brugere ikke tilmelde sig, så arrangører havde intet at holde styr på. Jeg videreudviklede platformen med en normaliseret datamodel, et tilmeldingsflow, der gemmer i databasen, afviser dubletter og viser ledige pladser, og et redesignet overblik, hvor arrangører kan søge og gruppere tilmeldinger. Resultatet er en platform, hvor brugere kan se med det samme, om der er plads, og arrangører kan finde deres gæster uden at lede. Forbedringerne i kode og database er eget arbejde.",
     tags: ["Frontend", "React", "Database"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
     gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    rows: [["/images/coming-soon-big.svg"]],
+    content: [
+      {
+        type: "images",
+        images: ["/images/coming-soon-big.svg"],
+      },
+    ],
     team: ["Laura Lynge Nielsen"],
     links: [
       {

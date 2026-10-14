@@ -10,7 +10,7 @@ export default function ProjectCard({ project, index }) {
         <img src={project.gridImage} alt={project.title} />
       </WipeReveal>
 
-      <FadeIn delay={index * 100} once>
+      <FadeIn className="project-card-fade" delay={index * 100} once>
         <div className="project-card-content">
           <h2 className="project-title">{project.title}</h2>
           <p className="project-subtitle small">{project.subtitle}</p>

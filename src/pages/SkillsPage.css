@@ -5,3 +5,16 @@
   gap: clamp(64px, calc(6.1vw + 40.2px), 128px); /* 64 → 128px */
   padding: 0 var(--page-gutter) clamp(64px, calc(6.1vw + 40.2px), 128px);
 }
+
+/* Sektion: sektionshoved og indhold under hinanden */
+.skills-page-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rækkerne starter lige under sektionshovedets streg */
+.skills-page-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

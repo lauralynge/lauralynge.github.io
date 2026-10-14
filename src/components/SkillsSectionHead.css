@@ -1,0 +1,38 @@
+/* To lige brede kolonner som på Om mig, så teksten starter midt på skærmen.
+   Etiket og tekst flugter på den første linje */
+.skills-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  padding-bottom: clamp(20px, calc(1.14vw + 15.5px), 32px); /* 20 → 32px */
+  border-bottom: 1px solid var(--blue);
+}
+
+/* Etiket: samme "Microtekst" som labels i Lige nu og kontaktrækkerne */
+.skills-section-title {
+  margin: 0;
+  padding-right: 2rem;
+  font-family: var(--font-sans);
+  font-size: var(--font-mobile-micro); /* 12px */
+  font-weight: 400;
+  line-height: var(--line-relaxed);
+  letter-spacing: 0.06em;
+  color: var(--burgundy);
+}
+
+.skills-section-text {
+  margin: 0;
+  line-height: var(--line-relaxed);
+}
+
+/* Mobil: etiket over teksten */
+@media (max-width: 767px) {
+  .skills-section-head {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .skills-section-title {
+    padding-right: 0;
+  }
+}

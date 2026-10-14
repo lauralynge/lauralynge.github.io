@@ -1,0 +1,7 @@
+/* Kompetencer: sektionerne under hinanden med samme sidemargin som resten af siden */
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, calc(6.1vw + 40.2px), 128px); /* 64 → 128px */
+  padding: 0 var(--page-gutter) clamp(64px, calc(6.1vw + 40.2px), 128px);
+}

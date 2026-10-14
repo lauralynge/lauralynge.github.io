@@ -18,3 +18,8 @@
   padding: 0;
   list-style: none;
 }
+
+/* Værktøjskassen: luft mellem stregen og sætningen */
+.skills-page-tools {
+  gap: clamp(32px, calc(2.29vw + 23.1px), 56px); /* 32 → 56px */
+}

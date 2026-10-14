@@ -1,7 +1,9 @@
 import SkillsHero from "../components/SkillsHero";
 import SkillsSectionHead from "../components/SkillsSectionHead";
 import SkillRow from "../components/SkillRow";
-import { skillAreas } from "../data/skills";
+import ToolSentence from "../components/ToolSentence";
+import MaskReveal from "../components/MaskReveal";
+import { skillAreas, toolSentence } from "../data/skills";
 import "./SkillsPage.css";
 
 // "Kompetencer – minimal – desktop" i Figma
@@ -25,6 +27,16 @@ function SkillsPage() {
             />
           ))}
         </ol>
+      </section>
+
+      <section className="skills-page-section skills-page-tools">
+        <SkillsSectionHead
+          title="Min værktøjskasse"
+          text="Programmer er bare værktøjer — det er nysgerrigheden, der driver mig."
+        />
+        <MaskReveal>
+          <ToolSentence parts={toolSentence} />
+        </MaskReveal>
       </section>
     </div>
   );

@@ -23,3 +23,22 @@ export const skillAreas = [
     tags: ["After Effects", "Premiere Pro", "Animation"],
   },
 ];
+
+// "Min værktøjskasse" – sætningen læses i rækkefølge. Tekst er almindelige ord,
+// { tool } bliver en pille, og "after" er tegnsætning, der hænger fast på pillen
+export const toolSentence = [
+  "Jeg skitserer idéer, tegner og bygger prototyper i",
+  { tool: "Figma", after: "." },
+  "Jeg koder i",
+  { tool: "VS Code" },
+  "med",
+  { tool: "JavaScript" },
+  "og",
+  { tool: "React", after: "," },
+  "holder styr på koden i",
+  { tool: "GitHub" },
+  "og bygger backend i",
+  { tool: "Supabase" },
+  "— og sætter det hele i bevægelse med",
+  { tool: "Jitter", after: "." },
+];

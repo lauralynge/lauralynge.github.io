@@ -1,0 +1,14 @@
+/* Størrelserne er i em, så pillen skalerer med sætningen omkring den
+   (30px tekst i en 52px sætning i Figma) */
+.tool-pill {
+  display: inline-block;
+  padding: 0.22em 0.8em; /* 8px 24px ved 30px */
+  border-radius: 999px;
+  background: var(--green);
+  font-family: var(--font-sans);
+  font-size: 0.577em; /* 30px ved 52px */
+  font-weight: 500;
+  line-height: 1.2;
+  vertical-align: 0.35em;
+  white-space: nowrap;
+}

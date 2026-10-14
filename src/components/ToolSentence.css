@@ -1,0 +1,15 @@
+.tool-sentence {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(28px, calc(2.286vw + 19.1px), 40px); /* 28 → 52px */
+  line-height: 1.65;
+}
+
+.tool-sentence-pill {
+  white-space: nowrap;
+}
+
+/* Lidt luft mellem pillen og tegnsætningen efter den (3px i Figma) */
+.tool-sentence-pill .tool-pill {
+  margin-right: 0.06em;
+}

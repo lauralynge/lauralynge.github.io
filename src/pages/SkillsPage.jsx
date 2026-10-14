@@ -2,8 +2,9 @@ import SkillsHero from "../components/SkillsHero";
 import SkillsSectionHead from "../components/SkillsSectionHead";
 import SkillRow from "../components/SkillRow";
 import ToolSentence from "../components/ToolSentence";
+import SoftSkillCard from "../components/SoftSkillCard";
 import MaskReveal from "../components/MaskReveal";
-import { skillAreas, toolSentence } from "../data/skills";
+import { skillAreas, toolSentence, softSkills } from "../data/skills";
 import "./SkillsPage.css";
 
 // "Kompetencer – minimal – desktop" i Figma
@@ -37,6 +38,22 @@ function SkillsPage() {
         <MaskReveal>
           <ToolSentence parts={toolSentence} />
         </MaskReveal>
+      </section>
+
+      <section className="skills-page-section skills-page-cards-section">
+        <SkillsSectionHead
+          title="Sådan arbejder jeg"
+          text="Godt design starter med leg — og bliver bedst, når man er flere om det."
+        />
+        <ul className="skills-page-cards">
+          {softSkills.map((skill, i) => (
+            <SoftSkillCard
+              key={skill.title}
+              number={String(i + 1).padStart(2, "0")}
+              {...skill}
+            />
+          ))}
+        </ul>
       </section>
     </div>
   );

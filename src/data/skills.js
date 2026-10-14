@@ -42,3 +42,37 @@ export const toolSentence = [
   "— og sætter det hele i bevægelse med",
   { tool: "Jitter", after: "." },
 ];
+
+// "Sådan arbejder jeg" – soft skills som farvede kort
+export const softSkills = [
+  {
+    title: "Nysgerrig",
+    text: "Jeg stiller spørgsmål, prøver nyt af og lærer hurtigt det, opgaven kræver.",
+    color: "light-blue",
+  },
+  {
+    title: "Legende",
+    text: "Jeg tror på, at de bedste idéer opstår, når man tør lege og afprøve.",
+    color: "green",
+  },
+  {
+    title: "Struktureret",
+    text: "Jeg deler store opgaver op i små dele og holder styr på helheden.",
+    color: "orange",
+  },
+  {
+    title: "Samarbejdende",
+    text: "Jeg trives i teams, hvor vi bygger videre på hinandens idéer.",
+    color: "blue",
+  },
+  {
+    title: "Detaljeorienteret",
+    text: "Jeg lægger mærke til de små ting, der gør helheden bedre.",
+    color: "pink",
+  },
+  {
+    title: "Empatisk",
+    text: "Jeg sætter mig i andres sted — både kollegers og brugeres.",
+    color: "burgundy",
+  },
+];

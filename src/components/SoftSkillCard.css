@@ -1,0 +1,64 @@
+.soft-skill-card {
+  /* Mørkeblå tekst på de lyse kort (Figma: #22307a) */
+  --card-ink: #22307a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: clamp(200px, calc(7.62vw + 170.3px), 280px); /* 200 → 280px */
+  padding: clamp(20px, calc(0.76vw + 17px), 28px); /* 20 → 28px */
+  border-radius: var(--border-radius-large);
+  color: var(--card-ink);
+}
+
+.soft-skill-card-number {
+  font-size: var(--font-mobile-micro);
+}
+
+.soft-skill-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.soft-skill-card-title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(24px, calc(0.76vw + 21px), 32px); /* 24 → 32px */
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.soft-skill-card-desc {
+  margin: 0;
+  padding-right: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Farver */
+.soft-skill-card-light-blue {
+  background: var(--light-blue);
+}
+.soft-skill-card-green {
+  background: var(--green);
+}
+.soft-skill-card-orange {
+  background: var(--orange);
+}
+.soft-skill-card-pink {
+  background: #d18fcc;
+}
+
+/* Mørke kort: lys tekst */
+.soft-skill-card-blue {
+  --card-ink: var(--white);
+  background: var(--blue);
+}
+.soft-skill-card-burgundy {
+  --card-ink: var(--white);
+  background: var(--burgundy);
+}

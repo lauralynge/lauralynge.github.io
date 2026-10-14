@@ -118,30 +118,20 @@ const projects = [
     description:
       "At finde en roomie handler om mere end fire vægge og en delt husleje – det handler om tillid, kemi og tryghed i sin egen hverdag. Alligevel må de fleste unge i dag navigere i ustrukturerede opslag på sociale medier, hvor kompatibilitet er umulig at afkode, og risikoen for dårlige matches er høj. Sammen med min gruppe designede og udviklede jeg Rumly – en app, der samler boligsøgning og roomie-matching ét sted, bygget på en matchscore, der gør kompatibilitet konkret og synlig. Gennem interviews, kortsortering og gentagne brugertests formede vi en løsning bygget på tre principper: tryg, venlig og social. Designet blev udviklet i Figma og realiseret som en kodet prototype i React med Supabase som backend – for at skabe en oplevelse, der føles så tryg som at finde et rigtigt hjem.",
     tags: ["UX", "UI", "Webapp"],
-    mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
-    gridImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    mainImage: `${import.meta.env.BASE_URL}images/rumly/rumly-thumbnail.png`,
+    gridImage: `${import.meta.env.BASE_URL}images/rumly/rumly-grid-thumbnail.png`,
     content: [
-      { type: "images", images: ["/images/placeholder.png"] }, // 1 billede → grid-1
+      { type: "images", images: ["/images/rumly/rumly-hero.png"] },
       {
         type: "images",
-        images: ["/images/placeholder.png", "/images/placeholder.png"],
+        images: [
+          "/images/rumly/rumly-mockup.png",
+          "/images/rumly/rumly-error.png",
+        ],
       }, // 2 billeder → grid-2
       {
         type: "images",
-        images: [
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-        ], // 3 billeder → grid-3
-      },
-      {
-        type: "images",
-        images: [
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-        ], // 4 billeder → grid-4
+        images: ["/images/rumly/rumly-brand-board.png"],
       },
     ],
     team: [
@@ -168,8 +158,8 @@ const projects = [
   },
   {
     slug: "again-by-la-rouge",
-    title: "AGAIN By LA ROUGE",
-    subtitle: "Et Seconhand subbrand til LA RŌUGE",
+    title: "AGAIN",
+    subtitle: "Et seconhand subbrand til LA RŌUGE",
     eyebrow: "Branding & re-commerce",
     summary: "Et Seconhand subbrand til LA RŌUGE",
     description:
@@ -322,24 +312,12 @@ const projects = [
     description:
       "Akvariet i Storcenter Nord ønskede at gøre viden om havets dyr til noget børn ikke bare læser, men opdager. Gennem observationer og samtaler med børnefamilier i akvariet designede og udviklede jeg en interaktiv touchskærm-prototype, hvor fisk og skabninger kommer til live gennem bevægelse og leg. Tanken var enkel: børn lærer bedst, når de selv får lov at trykke, udforske og blive overraskede. Legende illustrationer og en nysgerrig krabbe som guide møder en simpel, intuitiv interaktion, bygget i Figma og kodet i HTML, CSS og JavaScript – for at skabe en oplevelse, der føles som leg, men fungerer som læring.",
     tags: ["Interaktivt design", "Grafisk design", "UX"],
-    mainImage: `${import.meta.env.BASE_URL}placeholder.png`,
-    gridImage: `${import.meta.env.BASE_URL}placeholder.png`,
+    mainImage: `${import.meta.env.BASE_URL}images/akvarie/akvarie-hero.png`,
+    gridImage: `${import.meta.env.BASE_URL}images/akvarie/akvarie-grid-thumbnail.png`,
     content: [
       {
         type: "images",
-        images: ["/images/placeholder.png"],
-      }, // 1 billede → grid-1
-      {
-        type: "images",
-        images: ["/images/placeholder.png", "/images/placeholder.png"],
-      }, // 2 billeder → grid-2
-      {
-        type: "images",
-        images: [
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-          "/images/placeholder.png",
-        ], // 3 billeder → grid-3
+        images: ["/images/akvarie/akvarie-hero.png"],
       },
     ],
     team: ["Laura Lynge Nielsen"],

@@ -3,8 +3,6 @@
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  height: 45rem;
-  overflow: hidden;
 }
 
 /* billedet */
@@ -12,6 +10,7 @@
   overflow: hidden;
   border-radius: var(--border-radius-large);
   height: 35rem;
+  flex-shrink: 0; /* billedet beholder altid sin højde */
 }
 
 .project-card-image img {
@@ -35,6 +34,11 @@
   flex-grow: 1; /* ← vigtig! */
 }
 
+/* luft mellem subtitle og tags */
+.project-card .project-subtitle {
+  margin-bottom: 2rem;
+}
+
 /* tags skal ligge i bunden */
 .project-card-bottom {
   margin-top: auto; /* ← skubber tags ned i bunden */
@@ -42,6 +46,28 @@
 
 .project-card-arrow {
   display: none;
+}
+
+/* I ProjectGrid deler kortene i en række de samme 4 rækker (billede, titel,
+   subtitle, tags) via subgrid – fylder ét felt 2 linjer, bliver feltet lige
+   så højt i resten af rækken, så alle linjer flugter */
+@media (min-width: 768px) {
+  .project-grid-row .project-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+
+  .project-grid-row .project-card-fade,
+  .project-grid-row .project-card-content {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .project-grid-row .project-card-bottom {
+    margin-top: 0;
+  }
 }
 
 /* ----------------------------- */
@@ -86,7 +112,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .project-tags {

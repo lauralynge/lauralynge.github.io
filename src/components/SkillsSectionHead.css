@@ -8,15 +8,14 @@
   border-bottom: 1px solid var(--blue);
 }
 
-/* Etiket: samme "Microtekst" som labels i Lige nu og kontaktrækkerne */
+/* Etiket: samme størrelse som teksten ved siden af – farven skiller dem ad */
 .skills-section-title {
   margin: 0;
   padding-right: 2rem;
   font-family: var(--font-sans);
-  font-size: var(--font-mobile-micro); /* 12px */
+  font-size: var(--font-body);
   font-weight: 400;
   line-height: var(--line-relaxed);
-  letter-spacing: 0.06em;
   color: var(--burgundy);
 }
 

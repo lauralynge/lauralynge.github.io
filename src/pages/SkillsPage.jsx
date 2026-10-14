@@ -3,8 +3,14 @@ import SkillsSectionHead from "../components/SkillsSectionHead";
 import SkillRow from "../components/SkillRow";
 import ToolSentence from "../components/ToolSentence";
 import SoftSkillCard from "../components/SoftSkillCard";
+import ExperienceRow from "../components/ExperienceRow";
 import MaskReveal from "../components/MaskReveal";
-import { skillAreas, toolSentence, softSkills } from "../data/skills";
+import {
+  skillAreas,
+  toolSentence,
+  softSkills,
+  experiences,
+} from "../data/skills";
 import "./SkillsPage.css";
 
 // "Kompetencer – minimal – desktop" i Figma
@@ -52,6 +58,18 @@ function SkillsPage() {
               number={String(i + 1).padStart(2, "0")}
               {...skill}
             />
+          ))}
+        </ul>
+      </section>
+
+      <section className="skills-page-section">
+        <SkillsSectionHead
+          title="Kompetencer i praksis"
+          text="Ikke alle kompetencer kommer fra skolebænken. Mine jobs har lært mig ting, jeg bruger hver dag, når jeg designer."
+        />
+        <ul className="skills-page-list">
+          {experiences.map((job) => (
+            <ExperienceRow key={job.title} {...job} />
           ))}
         </ul>
       </section>

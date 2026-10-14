@@ -76,3 +76,22 @@ export const softSkills = [
     color: "burgundy",
   },
 ];
+
+// "Kompetencer i praksis" – jobs, nyeste først
+export const experiences = [
+  {
+    period: "April 2025 – nu",
+    title: "Butiksmedarbejder",
+    text: "Daglig kundekontakt har lært mig at forstå behov hurtigt, skabe gode oplevelser og bevare overblikket i et team — også når der er travlt.",
+  },
+  {
+    period: "Januar 2024 – nu",
+    title: "Content Writer",
+    text: "Jeg producerer undertekster til en online certificeringsuddannelse og formidler komplekst indhold klart og letforståeligt — struktureret og med styr på deadlines og kvalitet.",
+  },
+  {
+    period: "Oktober 2022 – juni 2023",
+    title: "Pædagogmedhjælper",
+    text: "At samarbejde med børn og kolleger og tilpasse mig forskellige behov og situationer har gjort mig tålmodig, struktureret og opmærksom på detaljer.",
+  },
+];

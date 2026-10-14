@@ -454,26 +454,107 @@ const projects = [
     ],
   },
   {
-    slug: "case-2",
-    title: "Case 2",
-    subtitle: "Case (2)",
+    slug: "vuuh",
+    title: "Vuuh",
+    subtitle: "En optimering med fokus på onboarding",
     eyebrow: "Product Optimization",
-    summary: "Kort beskrivelse her",
-    description: "Beskrivelsen af projektet her.",
-    tags: ["Frontend", "React", "Database"],
+    summary:
+      "UX audit og redesign af onboardingen i Vuuh – fra installation i Shopify til den første ordre.",
+    description: [
+      "Et nyt system bliver først en hjælp, når man føler sig sikker på hvert skridt, man tager i det. Det gælder også Vuuh, en B2B-platform, der henter produktdata og billeder fra brands og sender dem direkte videre til butikkens egne systemer, fx en Shopify-webshop. Men før det sker, skal Vuuh installeres, forbindes til Shopify, og den første ordre skal downloades – og netop her gik nye brugere i stå. Sammen med min gruppe undersøgte jeg onboardingen gennem heuristisk evaluering og kognitiv gennemgang, samlede fundene i en UX Audit Summary til Vuuh og redesignede tre dele af flowet i en interaktiv Figma-prototype – for at skabe en start, hvor brugeren hele tiden ved, hvad der er lykkedes, og hvad der skal ske nu.",
+      "Jeg var med i hele forarbejdet, fra evalueringen og prioriteringen af fund til UX Audit Summary, og stod særligt for idéen til og designet af demo-guiden, der tager brugeren gennem den første download i Vuuh.",
+    ],
+    tags: ["UX Audit", "Onboarding", "Interaktionsdesign", "Prototyping"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
-    gridImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
+    gridImage: `${import.meta.env.BASE_URL}images/vuuh/vuuh-grid-thumbnail.png`,
     content: [
+      // Hero
       {
         type: "images",
-        images: ["/images/coming-soon-big.svg"],
+        images: ["/videos/vuuh/vuuh-hero.mp4"],
+      },
+      // Case og persona
+      {
+        type: "text",
+        heading: "En start med flere spørgsmål end svar",
+        body: "Charlotte ejer en lille modebutik med en webshop, som en ekstern partner har bygget. Sortimentet kender hun ud og ind, men Shopify-apps og integrationer er ikke en del af hverdagen. Efter installationen lander Charlotte på en side uden tydelig bekræftelse eller vej videre, og tror, at opsætningen er færdig – uden at vide, at forbindelsen mangler, og at den første ordre stadig venter. Charlotte blev vores primære persona og pejlemærke gennem hele forløbet. Samtidig holdt vi fast i Emma, vores sekundære persona, som er vant til selv at installere apps – for hende måtte guidningen aldrig stå i vejen.",
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/persona.png"],
+      },
+      // Undersøgelse og prioritering
+      {
+        type: "text",
+        heading: "Hvor rejsen gik i stå",
+        body: "For at forstå, hvor det gik galt, fulgte vi Charlotte trin for trin gennem onboardingen i en kognitiv gennemgang og holdt skærmbilleder op mod Nielsens heuristikker. Det gav 27 observationer, og mønsteret var tydeligt: Systemet fortalte sjældent, hvad der var sket, og vigtig information druknede i tekst. Sproget skabte også tvivl – som da en knap med teksten “Next” i virkeligheden startede downloaden. Observationerne blev til fire fund, prioriteret efter, hvor brugeren risikerer at falde fra. Overgangen fra Shopify tilbage til Vuuh kom først, for en bruger, der tror, at opsætningen er færdig, når aldrig frem til den værdi, Vuuh skaber. Fundene samlede vi i tre fokusområder, som vi præsenterede for Vuuh.",
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/noegletal.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/rejsen-og-fund.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/heuristikker.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/kognitiv-gennemgang.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/fokusomraader.png"],
+      },
+      // Løsning, refleksion og forretningspotentiale
+      {
+        type: "text",
+        heading: "En onboarding, der viser vejen",
+        body: "Fokusområderne blev omsat til tre konkrete redesigns. Successiden bekræfter nu, at installationen er lykkedes, og peger på ét næste skridt. Forbindelsen til Shopify er blevet en guide i fire trin, og når den er på plads, står Shopify som forbundet, mens banneret på forsiden forsvinder. Inde i Vuuh tager en demo-guide brugeren gennem den første download, men den kan altid springes over, så erfarne brugere som Emma ikke bliver holdt tilbage. Arbejdet viste, at de største problemer sjældent ligger på de enkelte sider, men i overgangene, hvor brugeren skifter fra ét system til et andet. For Vuuh er det netop her, en ny kunde enten giver op eller kommer i gang. Derfor er næste skridt at teste prototypen med butiksejere som Charlotte.",
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/installation-feedback.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/connecting.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/guide-trin.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/shopify-connected.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/foerste-step.png"],
+      },
+      {
+        type: "images",
+        images: ["/images/vuuh/demo-guiden.png"],
       },
     ],
-    team: ["Laura Lynge Nielsen"],
+    team: [
+      "Caroline Majlandt Clorius",
+      "Cecilie Vestergaard Andersen",
+      "Freia Mandrup Krog",
+      "Mia Poder Olesen",
+      "Laura Lynge Nielsen",
+    ],
     links: [
       {
         label: "Figma Prototype",
-        href: "https://lauralynge.github.io/mellemrum-case-1//",
+        href: "https://www.figma.com/proto/qxEHsDMTggVACqGxY0fOVG/Case-2---Vuuh?node-id=363-118&viewport=5608%2C739%2C0.13&t=fXivRzceL7mjijPq-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=363%3A118&page-id=269%3A8183",
+      },
+      {
+        label: "UX Audit Summary",
+        href: `${import.meta.env.BASE_URL}pdf/UX-Audit-Summary.pdf`,
       },
     ],
   },

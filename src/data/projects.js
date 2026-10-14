@@ -354,10 +354,7 @@ const projects = [
         heading: "Fra fælles audit til egne prioriteringer",
         body: "Casen startede med en fælles teknisk audit ved studiebordet. Det var fra start tydeligt, at tilmeldingsformularen slet ikke virkede, så tilmeldinger hverken blev gemt eller koblet til events – derfor blev det det vigtigste punkt. Ud af 30 fund udvalgte jeg dem med størst betydning for brugere og videre udvikling, og skemaet viser min prioritering: først struktur og data, derefter det, brugerne mærker.",
       },
-      {
-        type: "images",
-        images: ["/images/mellemrum/smiley.png"],
-      },
+
       {
         type: "images",
         images: ["/images/mellemrum/mellemrum-audit.png"],

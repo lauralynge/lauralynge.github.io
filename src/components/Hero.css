@@ -27,11 +27,6 @@
   position: relative;
   z-index: 1;
 }
-.nav-item {
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-}
 
 /* ----- Tekst om mig ----- */
 

@@ -11,13 +11,6 @@
   display: contents;
 }
 
-.brand {
-  grid-column: 2;
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-}
-
 .nav-link {
   display: flex;
   align-items: center;

@@ -33,8 +33,13 @@
   );
 }
 
+/* Samme stil som .home-footer-bottom – stregen ovenover kommer fra .footer-links */
 .footer-bottom {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  color: var(--blue);
 }
 
 
@@ -57,10 +62,8 @@
   }
 
   .footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
+    height: 32px;
+    padding: 0;
     font-size: var(--font-mobile-micro);
     line-height: var(--line-relaxed);
   }

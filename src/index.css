@@ -52,13 +52,6 @@
   --light-blue: #99afee;
   --grey: #c3c3c3;
 
-  /* Semantic aliases */
-  --brand-primary: var(--blue);
-  --brand-secondary: var(--green);
-  --brand-accent: var(--light-blue);
-  --brand-dark: var(--burgundy);
-  --brand-light: var(--white);
-
   /* Global font + rendering */
   font-family:
     Inter,
@@ -84,7 +77,6 @@
   --row-h: 10vh;
 
   /* Shadows */
-  --shadow-bottom: 0 2px 10px rgba(41, 35, 42, 0.2);
   --shadow-top: 0 -2px 10px rgba(41, 35, 42, 0.2);
 
   /* Border */
@@ -133,19 +125,19 @@
 }
 
 .box-orange {
-  background: #f29b3f;
+  background: var(--orange);
 }
 .box-burgundy {
-  background: #762117;
+  background: var(--burgundy);
 }
 .box-green {
-  background: #e6e19c;
+  background: var(--green);
 }
 .box-blue {
-  background: #99afee;
+  background: var(--light-blue);
 }
 .box-grey {
-  background: #c3c3c3;
+  background: var(--grey);
 }
 .box-pink {
   background: #d98fd0;
@@ -241,17 +233,6 @@ p {
   font-weight: 600;
 }
 
-/* Microtekst */
-.micro {
-  font-family: "Inter", sans-serif;
-  font-size: var(--font-small);
-  line-height: var(--line-tight);
-}
-
-.Hero .Navbar {
-  min-height: 100vh;
-}
-
 /* Generel page styling */
 
 .page {
@@ -302,49 +283,3 @@ p {
   grid-column: 2 / 7;
   grid-row: 1;
 }
-
-/* ----------------------------- */
-/* RESPONSIVE DESIGN            */
-/* ----------------------------- */
-
-/* ----------------------------- */
-/* RACE    */
-/* ----------------------------- */
-/*
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: min(100% - 2rem, 1120px);
-  margin: 0 auto;
-  padding: 1.25rem 0;
-}
-
-.brand {
-  color: #111827;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.25rem;
-}
-
-.site-nav a {
-  border-radius: 999px;
-  color: #475569;
-  padding: 0.55rem 0.8rem;
-  text-decoration: none;
-}
-
-.site-nav a.active,
-.site-nav a:hover {
-  color: #111827;
-  background: #ffffff;
-}
-
-*/

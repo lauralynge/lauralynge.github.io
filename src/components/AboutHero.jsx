@@ -22,7 +22,7 @@ export default function AboutHero() {
 
         <a
           className="about-hero-resume"
-          href="/resume.pdf"
+          href={`${import.meta.env.BASE_URL}pdf/resume-lauraLynge.pdf`}
           target="_blank"
           rel="noopener noreferrer"
         >

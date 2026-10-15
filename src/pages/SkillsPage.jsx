@@ -31,6 +31,7 @@ function SkillsPage() {
               number={String(i + 1).padStart(2, "0")}
               title={area.title}
               tags={area.tags}
+              delay={i * 80}
             />
           ))}
         </ol>
@@ -56,6 +57,7 @@ function SkillsPage() {
             <SoftSkillCard
               key={skill.title}
               number={String(i + 1).padStart(2, "0")}
+              delay={(i % 3) * 100}
               {...skill}
             />
           ))}
@@ -68,8 +70,8 @@ function SkillsPage() {
           text="Ikke alle kompetencer kommer fra skolebænken. Mine jobs har lært mig ting, jeg bruger hver dag, når jeg designer."
         />
         <ul className="skills-page-list">
-          {experiences.map((job) => (
-            <ExperienceRow key={job.title} {...job} />
+          {experiences.map((job, i) => (
+            <ExperienceRow key={job.title} {...job} delay={i * 80} />
           ))}
         </ul>
       </section>

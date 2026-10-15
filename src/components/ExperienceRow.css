@@ -23,7 +23,8 @@
   max-width: 760px;
   margin: 0;
   line-height: 1.7;
-  opacity: 0.85;
+  /* Nedtonet via farven – opacity bruges af RowReveal */
+  color: color-mix(in srgb, var(--blue) 85%, transparent);
 }
 
 @media (max-width: 767px) {

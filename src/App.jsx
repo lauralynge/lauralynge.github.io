@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
+import SkillsPage from "./pages/SkillsPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -46,6 +47,15 @@ function App() {
         element={
           <DefaultLayout>
             <AboutPage />
+          </DefaultLayout>
+        }
+      />
+
+      <Route
+        path="/kompetencer"
+        element={
+          <DefaultLayout>
+            <SkillsPage />
           </DefaultLayout>
         }
       />

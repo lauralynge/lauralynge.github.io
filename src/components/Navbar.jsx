@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import NavbarGridLines from "./NavbarGridLines";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useHideOnScroll from "../hooks/useHideOnScroll";
@@ -10,7 +10,7 @@ import "./Navbar.css";
 const MOBILE_LINKS = [
   { label: "Projekter", to: "/projects", box: "orange", boxSide: "right" },
   { label: "Om mig", to: "/about", box: "green", boxSide: "left" },
-  { label: "Kompetencer", to: "/#kompetencer", box: "grey", boxSide: "right" },
+  { label: "Kompetencer", to: "/kompetencer", box: "grey", boxSide: "right" },
   { label: "Kontakt", to: "/contact", box: "burgundy", boxSide: "left" },
 ];
 
@@ -29,26 +29,6 @@ const SOCIALS = [
 ];
 
 function MobileMenu({ onClose }) {
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
-
-  // "Kompetencer" er en sektion på forsiden – scroll ned til den
-  const goToSkills = (e) => {
-    e.preventDefault();
-    onClose();
-    const scroll = () =>
-      document
-        .getElementById("kompetencer")
-        ?.scrollIntoView({ behavior: "smooth" });
-
-    if (pathname === "/") {
-      scroll();
-    } else {
-      navigate("/");
-      setTimeout(scroll, 100); // vent til forsiden er renderet
-    }
-  };
-
   return (
     <div
       className="mobile-menu"
@@ -81,7 +61,7 @@ function MobileMenu({ onClose }) {
             <NavLink
               to={link.to}
               className="mobile-menu-link"
-              onClick={link.to === "/#kompetencer" ? goToSkills : onClose}
+              onClick={onClose}
             >
               <span>{link.label}</span>
               <img src="/menu-pil.svg" alt="" width="20" height="20" />
@@ -195,11 +175,14 @@ export default function Navbar({
       </NavLink>
 
       <nav className="site-nav" aria-label="Primær navigation">
-        <NavLink to="/projects" className="nav-link" style={{ gridColumn: 5 }}>
+        <NavLink to="/projects" className="nav-link" style={{ gridColumn: 4 }}>
           <h3>Projekter</h3>
         </NavLink>
-        <NavLink to="/about" className="nav-link" style={{ gridColumn: 6 }}>
+        <NavLink to="/about" className="nav-link" style={{ gridColumn: 5 }}>
           <h3>Om mig</h3>
+        </NavLink>
+        <NavLink to="/kompetencer" className="nav-link" style={{ gridColumn: 6 }}>
+          <h3>Kompetencer</h3>
         </NavLink>
         <NavLink to="/contact" className="nav-link" style={{ gridColumn: 7 }}>
           <h3>Kontakt</h3>

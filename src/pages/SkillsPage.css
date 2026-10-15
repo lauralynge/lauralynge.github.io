@@ -1,0 +1,51 @@
+/* Kompetencer: sektionerne under hinanden med samme sidemargin som resten af siden */
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, calc(6.1vw + 40.2px), 128px); /* 64 → 128px */
+  padding: 0 var(--page-gutter) clamp(64px, calc(6.1vw + 40.2px), 128px);
+}
+
+/* Sektion: sektionshoved og indhold under hinanden */
+.skills-page-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rækkerne starter lige under sektionshovedets streg */
+.skills-page-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Værktøjskassen: luft mellem stregen og sætningen */
+.skills-page-tools {
+  gap: clamp(32px, calc(2.29vw + 23.1px), 56px); /* 32 → 56px */
+}
+
+/* Sådan arbejder jeg: 3 kort pr. række på desktop, 2 på tablet, 1 på mobil */
+.skills-page-cards-section {
+  gap: clamp(24px, calc(1.52vw + 18.1px), 40px); /* 24 → 40px */
+}
+
+.skills-page-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, calc(0.38vw + 10.5px), 16px); /* 12 → 16px */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .skills-page-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .skills-page-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,85 @@
+/* Grønt bånd i fuld bredde, alt centreret */
+.page-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, calc(0.76vw + 9px), 20px); /* 12 → 20px */
+  padding: clamp(64px, calc(5.33vw + 43.2px), 120px) var(--page-gutter); /* 64 → 120px */
+  background: var(--green);
+  border-top: 1px solid var(--blue); /* matcher stregen i toppen af footeren */
+  color: var(--blue);
+  text-align: center;
+}
+
+.page-cta-intro {
+  margin: 0;
+  line-height: var(--line-relaxed);
+  opacity: 0.8;
+}
+
+/* Hovedlinket: stort og blåt, pilen glider til højre ved hover */
+.page-cta-link {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 12px; /* plads til at pilen kan glide ud uden at MaskReveal skærer den af */
+  font-family: var(--font-serif);
+  font-size: clamp(36px, calc(4.19vw + 19.7px), 80px); /* 36 → 80px */
+  line-height: var(--line-normal);
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Samme pil og hover som "Alle projekter" på forsiden */
+.page-cta-arrow {
+  display: inline-block;
+  height: 0.45em; /* skalerer med teksten */
+  width: auto;
+  margin-left: 0.3em;
+  transition: transform 0.3s ease;
+}
+
+.page-cta-link:hover .page-cta-arrow,
+.page-cta-link:focus-visible .page-cta-arrow {
+  transform: translateX(10px);
+}
+
+/* MaskReveal skjuler alt uden for linjen, så fokus vises som understregning i stedet for outline */
+.page-cta-link:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
+.page-cta-secondary:focus-visible {
+  outline: none;
+  border-bottom-width: 2px;
+}
+
+/* Sekundært link: små versaler med streg under */
+.page-cta-secondary {
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.page-cta-secondary:hover {
+  opacity: 0.7;
+}
+
+/* Mobil: pilen må gerne bryde ned på ny linje sammen med teksten */
+@media (max-width: 599px) {
+  .page-cta-link {
+    display: inline;
+  }
+
+  .page-cta-arrow {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,47 @@
+/* Desktop: nummer | titel | tags på én linje */
+.skill-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  grid-template-areas: "number title tags";
+  align-items: center;
+  column-gap: 24px;
+  min-height: clamp(80px, calc(4.57vw + 62.2px), 128px); /* 80 → 128px */
+  border-bottom: 1px solid var(--blue);
+}
+
+.skill-row-number {
+  grid-area: number;
+  padding-left: 4px;
+  font-size: var(--font-mobile-micro);
+}
+
+.skill-row-title {
+  grid-area: title;
+  margin: 0;
+  font-size: var(--font-h2-fluid); /* 30 → 48px */
+  line-height: 1.05;
+}
+
+.skill-row-tags {
+  grid-area: tags;
+  margin: 0;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* Smallere skærme: tags under titlen */
+@media (max-width: 1023px) {
+  .skill-row {
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+      "number title"
+      ".      tags";
+    align-items: baseline;
+    row-gap: 8px;
+    padding: 20px 0;
+  }
+
+  .skill-row-tags {
+    text-align: left;
+  }
+}

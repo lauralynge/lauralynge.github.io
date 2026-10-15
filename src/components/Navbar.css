@@ -22,6 +22,8 @@
 /* Ingen margin og trimmet linjeboks, så teksten står i midten af cellen */
 .nav-link h3 {
   margin: 0;
+  /* 16 → 20px, så "Kompetencer" kan være i cellen på smalle skærme */
+  font-size: clamp(16px, 1.39vw, var(--font-h3));
   text-box: trim-both cap alphabetic;
 }
 

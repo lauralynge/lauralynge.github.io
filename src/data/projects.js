@@ -527,7 +527,7 @@ const projects = [
     links: [
       {
         label: "Figma Prototype",
-        href: "https://www.figma.com/proto/qxEHsDMTggVACqGxY0fOVG/Case-2---Vuuh?node-id=363-118&viewport=5608%2C739%2C0.13&t=fXivRzceL7mjijPq-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=363%3A118&page-id=269%3A8183",
+        href: "https://www.figma.com/proto/qxEHsDMTggVACqGxY0fOVG/Case-2---Vuuh?node-id=363-118&viewport=1195%2C448%2C0.02&t=Y3cJc3WWDlLJvG3W-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=363%3A118&page-id=269%3A8183",
       },
       {
         label: "UX Audit Summary",

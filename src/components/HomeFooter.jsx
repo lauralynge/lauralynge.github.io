@@ -6,9 +6,9 @@ export default function HomeFooter() {
       <div className="home-footer-top">
         <div className="home-footer-text">
           <h1>
-            Mangler i
+            Mangler I en
             <br />
-            Praktikant?
+            praktikant?
           </h1>
         </div>
 
@@ -17,7 +17,7 @@ export default function HomeFooter() {
           <p>
             I kan altid fange mig på mail:
             <br />
-            lauralynge@gmail.com
+            <a href="mailto:lauralynge@gmail.com">lauralynge@gmail.com</a>
           </p>
           <p>Lad os skabe noget sammen.</p>
         </div>

@@ -152,16 +152,16 @@ const projects = [
       },
       {
         label: "GitHub Repo",
-        href: "https://github.com/username/username.github.io",
+        href: "https://github.com/Cecilieva/webapp-eksamensprojekt",
       },
     ],
   },
   {
     slug: "again-by-la-rouge",
     title: "AGAIN",
-    subtitle: "Et seconhand subbrand til LA RŌUGE",
+    subtitle: "Et secondhand-subbrand til LA RŌUGE",
     eyebrow: "Branding & re-commerce",
-    summary: "Et Seconhand subbrand til LA RŌUGE",
+    summary: "Et secondhand-subbrand til LA RŌUGE",
     description: [
       "Secondhand-markedet vokser fortsat, og flere forbrugere ser værdien i at købe kvalitetsprodukter til en lavere pris. Selvom LA RŌUGE allerede tilbyder secondhand, er funktionen endnu ikke blevet en naturlig del af kundeoplevelsen. Mange vælger i stedet Vinted, når de vil sælge deres tøj, og nye besøgende bliver sjældent længe nok til at engagere sig. Gennem vores analyse identificerede vi tre centrale udfordringer: manglende kendskab til platformen, begrænset tryghed i købs- og salgsprocessen og en brugerrejse, der ikke er tilstrækkelig enkel. Vores løsning blev et subbrand, der giver LA RŌUGEs re-commerce sit eget navn, sin egen stemme og en digital brugerrejse, som gør det lige så nemt at sælge sit gamle LA RŌUGE-tøj, som det er at finde sit næste.",
       "Jeg havde særligt fokus på brandidentiteten, men var også med i udviklingen af både prototypen og branddecket. AI er brugt som sparringspartner til idéudvikling.",

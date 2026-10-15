@@ -162,8 +162,10 @@ const projects = [
     subtitle: "Et seconhand subbrand til LA RŌUGE",
     eyebrow: "Branding & re-commerce",
     summary: "Et Seconhand subbrand til LA RŌUGE",
-    description:
-      "Secondhand-markedet vokser fortsat, og flere forbrugere ser værdien i at købe kvalitetsprodukter til en lavere pris. Selvom LA RŌUGE allerede tilbyder secondhand, er funktionen endnu ikke blevet en naturlig del af kundeoplevelsen. Mange vælger i stedet Vinted, når de vil sælge deres tøj, og nye besøgende bliver sjældent længe nok til at engagere sig. Gennem vores analyse identificerede vi tre centrale udfordringer: manglende kendskab til platformen, begrænset tryghed i købs- og salgsprocessen og en brugerrejse, der ikke er tilstrækkelig enkel. Vores løsning blev et subbrand, der giver LA RŌUGEs re-commerce sit eget navn, sin egen stemme og en digital brugerrejse, som gør det lige så nemt at sælge sit gamle LA RŌUGE-tøj, som det er at finde sit næste. Jeg havde særligt fokus på brandidentiteten, men var også med i udviklingen af både prototypen og branddecket.",
+    description: [
+      "Secondhand-markedet vokser fortsat, og flere forbrugere ser værdien i at købe kvalitetsprodukter til en lavere pris. Selvom LA RŌUGE allerede tilbyder secondhand, er funktionen endnu ikke blevet en naturlig del af kundeoplevelsen. Mange vælger i stedet Vinted, når de vil sælge deres tøj, og nye besøgende bliver sjældent længe nok til at engagere sig. Gennem vores analyse identificerede vi tre centrale udfordringer: manglende kendskab til platformen, begrænset tryghed i købs- og salgsprocessen og en brugerrejse, der ikke er tilstrækkelig enkel. Vores løsning blev et subbrand, der giver LA RŌUGEs re-commerce sit eget navn, sin egen stemme og en digital brugerrejse, som gør det lige så nemt at sælge sit gamle LA RŌUGE-tøj, som det er at finde sit næste.",
+      "Jeg havde særligt fokus på brandidentiteten, men var også med i udviklingen af både prototypen og branddecket. AI er brugt som sparringspartner til idéudvikling.",
+    ],
     tags: ["Branding", "Koncept", "UX"],
     mainImage: `${import.meta.env.BASE_URL}images/again/again-thumbnail.png`,
     gridImage: `${import.meta.env.BASE_URL}images/again/again-grid-thumbnail.png`,
@@ -175,7 +177,7 @@ const projects = [
       {
         type: "text",
         heading: "Secondhand lever i skyggen af hovedbrandet",
-        body: "LA RŌUGE tilbyder allerede secondhand, men det er en funktion, ikke et univers. Vores analyse bygger på LA RŌUGEs egne salgsdata og kundeprofil, og tallene viser tydeligt problemet: kunderne vil gerne sælge, men vælger Vinted, og de besøgende, der finder vej, bliver ikke hængende. Vi pegede på tre centrale udfordringer: manglende kendskab, begrænset tryghed og en utilstrækkelig brugerrejse.",
+        body: "LA RŌUGE tilbyder allerede secondhand, men det er en funktion, ikke et univers. Vores analyse bygger på LA RŌUGEs egne salgsdata og kundeprofil, præsenteret af Pernille Volquartz, og tallene viser tydeligt problemet: kunderne vil gerne sælge, men vælger Vinted, og de besøgende, der finder vej, bliver ikke hængende. Vi pegede på tre centrale udfordringer: manglende kendskab, begrænset tryghed og en utilstrækkelig brugerrejse.",
       },
       {
         type: "images",
@@ -192,7 +194,7 @@ const projects = [
       {
         type: "text",
         heading: "To kunder, to behov",
-        body: "LA RŌUGEs data viste, at kernekunden er omkring 47 år. Hun er sjældent secondhand-køber, men har garderoben fuld af LA RŌUGE – hun er derfor vigtigst som sælger. Samtidig viste tallene fra LA RŌUGE, at 47 % af de 18–49-årige køber secondhand online, mod under 20 % af de 50–79-årige. Det pegede på en ny målgruppe. Den yngre kunde køber ikke nødvendigvis brugt for bæredygtighedens skyld, men for at få adgang til et brand, hun ellers ikke ville betale fuld pris for. Derfor designede vi til to roller frem for én.",
+        body: "LA RŌUGEs data viste, at kernekunden er omkring 47 år. Hun er sjældent secondhand-køber, men har garderoben fuld af LA RŌUGE – hun er derfor vigtigst som sælger. Samtidig viser tal fra PostNord (2024), at 47 % af de 18–49-årige køber secondhand online, mod under 20 % af de 50–79-årige. Det pegede på en ny målgruppe. Den yngre kunde køber ikke nødvendigvis brugt for bæredygtighedens skyld, men for at få adgang til et brand, hun ellers ikke ville betale fuld pris for. Derfor designede vi til to roller frem for én.",
       },
       {
         type: "images",
@@ -339,7 +341,7 @@ const projects = [
     description: [
       "Mellemrum er en kulturplatform for Aarhus, hvor brugere finder og tilmelder sig lokale arrangementer, og arrangører opretter events og holder styr på tilmeldinger. Udgangspunktet var en eksisterende løsning med duplikeret kode, manglende fejlhåndtering og en datamodel, der ikke kunne vokse. Samtidig kunne brugere ikke tilmelde sig, så arrangører havde intet at holde styr på.",
       "Jeg videreudviklede platformen med en normaliseret datamodel, et tilmeldingsflow, der gemmer i databasen, afviser dubletter og viser ledige pladser, og et redesignet overblik, hvor arrangører kan søge og gruppere tilmeldinger. Resultatet er en platform, hvor brugere kan se med det samme, om der er plads, og arrangører kan finde deres gæster uden at lede.",
-      "Forbedringerne i kode og database er eget arbejde.",
+      "Forbedringerne i kode og database er eget arbejde. AI er brugt som sparringspartner til at prioritere fejlfund.",
     ],
     tags: ["Webudvikling", "Databasedesign ", "UX", "Frontend-arkitektur"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,
@@ -437,7 +439,7 @@ const projects = [
       "UX audit og redesign af onboardingen i Vuuh – fra installation i Shopify til den første ordre.",
     description: [
       "Et nyt system bliver først en hjælp, når man føler sig sikker på hvert skridt, man tager i det. Det gælder også Vuuh, en B2B-platform, der henter produktdata og billeder fra brands og sender dem direkte videre til butikkens egne systemer, fx en Shopify-webshop. Men før det sker, skal Vuuh installeres, forbindes til Shopify, og den første ordre skal downloades – og netop her gik nye brugere i stå. Sammen med min gruppe undersøgte jeg onboardingen gennem heuristisk evaluering og kognitiv gennemgang, samlede fundene i en UX Audit Summary til Vuuh og redesignede tre dele af flowet i en interaktiv Figma-prototype – for at skabe en start, hvor brugeren hele tiden ved, hvad der er lykkedes, og hvad der skal ske nu.",
-      "Jeg var med i hele forarbejdet, fra evalueringen og prioriteringen af fund til UX Audit Summary, og stod særligt for idéen til og designet af demo-guiden, der tager brugeren gennem den første download i Vuuh.",
+      "Jeg var med i hele forarbejdet, fra evalueringen og prioriteringen af fund til UX Audit Summary, og stod særligt for idéen til og designet af demo-guiden, der tager brugeren gennem den første download i Vuuh. AI er brugt som sparringspartner til at strukturere fund.",
     ],
     tags: ["UX Audit", "Onboarding", "Interaktionsdesign", "Prototyping"],
     mainImage: `${import.meta.env.BASE_URL}coming-soon.svg`,

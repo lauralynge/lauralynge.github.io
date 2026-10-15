@@ -464,7 +464,7 @@ const projects = [
       {
         type: "text",
         heading: "Hvor rejsen gik i stå",
-        body: "For at forstå, hvor det gik galt, fulgte vi Charlotte trin for trin gennem onboardingen i en kognitiv gennemgang og holdt skærmbilleder op mod Nielsens heuristikker. Det gav 27 observationer, og mønsteret var tydeligt: Systemet fortalte sjældent, hvad der var sket, og vigtig information druknede i tekst. Sproget skabte også tvivl – som da en knap med teksten “Next” i virkeligheden startede downloaden. Observationerne blev til fire fund, prioriteret efter, hvor brugeren risikerer at falde fra. Overgangen fra Shopify tilbage til Vuuh kom først, for en bruger, der tror, at opsætningen er færdig, når aldrig frem til den værdi, Vuuh skaber. Fundene samlede vi i tre fokusområder, som vi præsenterede for Vuuh.",
+        body: "For at finde ud af, hvor det gik galt, fulgte vi Charlotte trin for trin gennem onboardingen i en kognitiv gennemgang og holdt skærmbillederne op mod Nielsens heuristikker. Mønsteret var tydeligt: Systemet fortalte sjældent, hvad der var sket, og sproget skabte tvivl – en knap med teksten “Next” startede fx downloaden. Vi prioriterede fundene efter, hvor brugeren risikerer at falde fra, og overgangen fra Shopify tilbage til Vuuh kom først: En bruger, der tror, opsætningen er færdig, når aldrig frem til den værdi, Vuuh skaber.",
       },
       {
         type: "images",

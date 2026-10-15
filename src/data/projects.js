@@ -422,7 +422,7 @@ const projects = [
     links: [
       {
         label: "Live Site",
-        href: "https://lauralynge.github.io/mellemrum-case-1//",
+        href: "https://lauralynge.github.io/mellemrum-case-1/",
       },
       {
         label: "Github Repo",
